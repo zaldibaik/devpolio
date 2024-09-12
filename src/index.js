@@ -10,7 +10,8 @@ import 'aos/dist/aos.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='bg-customBlue2'>
+    <App /></div>
   </React.StrictMode>
 );
 AOS.init();

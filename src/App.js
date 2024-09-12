@@ -11,7 +11,7 @@ import Skills from './pages/Skills';
 function App() {
   return (
     <Router>
-      <div className="flex bg-customBlue2">
+      <div >
         <Sidebar />
         <div className="ml-16 w-full">
           <Routes>

@@ -10,21 +10,29 @@ const ProjectSection = () => {
   // Data proyek berdasarkan kategori
   const projects = {
     "Web Development": [
-      { id: 1, name: "Project 1", image: "https://via.placeholder.com/600x400" },
-      { id: 2, name: "Project 2", image: "https://via.placeholder.com/600x400" }
+      {
+        id: 1,
+        name: "Project 1",
+        image: "https://via.placeholder.com/600x400",
+      },
+      {
+        id: 2,
+        name: "Project 2",
+        image: "https://via.placeholder.com/600x400",
+      },
     ],
     "Graphic Design": [
       { id: 3, name: "Design 1", image: "https://via.placeholder.com/600x400" },
-      { id: 4, name: "Design 2", image: "https://via.placeholder.com/600x400" }
+      { id: 4, name: "Design 2", image: "https://via.placeholder.com/600x400" },
     ],
     "Microsoft Office": [
       { id: 5, name: "Office 1", image: "https://via.placeholder.com/600x400" },
-      { id: 6, name: "Office 2", image: "https://via.placeholder.com/600x400" }
-    ]
+      { id: 6, name: "Office 2", image: "https://via.placeholder.com/600x400" },
+    ],
   };
 
   return (
-    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4">
+    <div className="bg-customBlue2 min-h-screen flex justify-center items-center px-4 md:px-6">
       {/* Main Content */}
       <div className="w-full max-w-5xl px-4 py-8 mx-auto">
         {/* Project Title */}
