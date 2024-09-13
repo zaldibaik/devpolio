@@ -26,7 +26,7 @@ const Sidebar = () => {
       </div>
 
       {/* Navbar for Mobile */}
-      <div className="md:hidden fixed bottom-0 w-full flex justify-around text-white py-4">
+      <div className="md:hidden bg-customBlue2 fixed bottom-0 w-full flex justify-around text-white py-4">
         {navItems.map((item, index) => (
           <Link key={index} to={item.to} className="flex justify-center">
             <item.icon />

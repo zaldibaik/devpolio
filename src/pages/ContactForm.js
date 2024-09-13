@@ -3,7 +3,7 @@ import myprofile from "../pages/assets/myprofile.png"; // Sesuaikan path gambar
 
 const ContactForm = () => {
   return (
-    <div className="bg-customBlue2 min-h-screen text-white flex justify-center items-center overflow-hidden">
+    <div className="bg-customBlue2 min-h-screen text-white flex justify-center items-center overflow-hidden pb-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-customBlue rounded-xl p-10">
         {/* Left Side: Profile Section */}
         <div className="flex flex-col items-center text-center">

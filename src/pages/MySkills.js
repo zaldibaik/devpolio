@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import "swiper/css/navigation"; // Tambahkan CSS untuk navigasi (panah)
+import { Pagination, Navigation } from "swiper/modules";
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development"); // State untuk kategori aktif
@@ -11,14 +12,14 @@ const Skills = () => {
   // Data skills berdasarkan kategori
   const skills = {
     "Web Development": [
-      { name: "Programming language", icon: "/path/to/html-icon.png" },
+      { name: "Bahasa", icon: "/path/to/html-icon.png" },
       { name: "FrameWork", icon: "/path/to/css-icon.png" },
     ],
     "Graphic Design": [
       { name: "Hardware", icon: "/path/to/photoshop-icon.png" },
     ],
     "Microsoft Office": [
-      { name: "MIcrosoft Office", icon: "/path/to/word-icon.png" },
+      { name: "Word", icon: "/path/to/word-icon.png" },
     ],
   };
 
@@ -31,7 +32,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="Skills" className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden">
+    <div id="Skills" className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10">
       {/* Main Content */}
       <div className="w-full max-w-4xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
@@ -71,27 +72,47 @@ const Skills = () => {
           </div>
 
           {/* Carousel Section */}
-          <Swiper
-            modules={[Pagination]}
-            pagination={{ clickable: true }}
-            spaceBetween={30}
-            slidesPerView={1}
-            className="mt-8 w-full"
-            onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
-          >
-            {skills[activeCategory].map((skill, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center">
-                  <h2 className="text-2xl md:text-4xl font-bold italic text-white">
-                    {skill.name}
-                  </h2>
-                  <div className="flex justify-center mt-4 space-x-8">
-                    <img src={skill.icon} alt={skill.name} className="h-16" />
+          <div className="relative mt-8">
+            {/* Tombol Kurang Dari */}
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full"
+            >
+              &lt;
+            </button>
+
+            {/* Swiper */}
+            <Swiper
+              modules={[Pagination, Navigation]}
+              pagination={{ clickable: true }}
+              navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }} // Tambahkan properti navigasi
+              spaceBetween={30}
+              slidesPerView={1}
+              className="w-full"
+              onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
+            >
+              {skills[activeCategory].map((skill, index) => (
+                <SwiperSlide key={index}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center">
+                    <h2 className="text-2xl md:text-4xl font-bold italic text-white">
+                      {skill.name}
+                    </h2>
+                    <div className="flex justify-center mt-4 space-x-8">
+                      <img src={skill.icon} alt={skill.name} className="h-16" />
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Tombol Lebih Dari */}
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full"
+            >
+              &gt;
+            </button>
+          </div>
         </div>
       </div>
     </div>

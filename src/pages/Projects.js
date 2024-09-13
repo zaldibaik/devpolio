@@ -120,7 +120,7 @@ const ProjectSection = () => {
         >
           {projects[activeCategory].map((project) => (
             <SwiperSlide key={project.id}>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center pb-10">
                 <div className="text-center">
                   {/* Link dibungkus di sekitar gambar dan judul */}
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
