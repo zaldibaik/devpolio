@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,29 +6,62 @@ import { Navigation } from "swiper/modules"; // Import Navigation untuk panah
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
+  const swiperRef = useRef(null); // Reference untuk Swiper
 
-  // Data proyek berdasarkan kategori
+  // Data proyek berdasarkan kategori, dengan link yang sesuai
   const projects = {
     "Web Development": [
       {
         id: 1,
         name: "Project 1",
-        image: "https://via.placeholder.com/600x400",
+        image:
+          "https://image.popmama.com/content-images/community/20230620/community-19d71834eb62929ad943075160605b88.jpg?1726211369",
+        link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
       },
       {
         id: 2,
         name: "Project 2",
-        image: "https://via.placeholder.com/600x400",
+        image:
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCDhj1K6gWUt97g14MhdFKwelz-5kW3190rXmiv6w-SjG9AATYTw8CUp8VE17Vaam-o-ugJEGOlxfPkPG66V5Ky78SQX3TgDy31DYuQKMXEr6a26VWX-d2WBTQZWJ_E36BmSxEaudIGgga2L3Mh1fkQwZ-32tvt8241tZP4m_FU3Br4NyxRwTkPnmcALbk/s800/Ultraman-Ginga-S-Movie-Heisei-Ultras.jpg",
+        link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
       },
     ],
     "Graphic Design": [
-      { id: 3, name: "Design 1", image: "https://via.placeholder.com/600x400" },
-      { id: 4, name: "Design 2", image: "https://via.placeholder.com/600x400" },
+      {
+        id: 3,
+        name: "Design 1",
+        image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+        link: "https://www.behance.net/your-profile/design1", // Link ke Behance
+      },
+      {
+        id: 4,
+        name: "Design 2",
+        image: "https://media.suara.com/pictures/653x366/2021/09/15/19731-kartun-upin-dan-ipin-facebookupinipinofficial.jpg",
+        link: "https://www.behance.net/your-profile/design2", // Link ke Behance
+      },
     ],
     "Microsoft Office": [
-      { id: 5, name: "Office 1", image: "https://via.placeholder.com/600x400" },
-      { id: 6, name: "Office 2", image: "https://via.placeholder.com/600x400" },
+      {
+        id: 5,
+        name: "Office 1",
+        image: "https://cdn.idntimes.com/content-images/duniaku/post/20230330/dora-dan-boots-dfc63c106f03db8ea792dcc7647d5be9_600x400.jpg",
+        link: "https://upload.microsoft.com/your-profile/office1", // Link upload untuk Office
+      },
+      {
+        id: 6,
+        name: "Office 2",
+        image: "https://d1tgyzt3mf06m9.cloudfront.net/production/media/2018/juni/inilah-aktor-villain-di-live-action-dora-the-explorer/1-inilah-aktor-villain-di-live-action-dora-the-explorer-700x700.jpg",
+        link: "https://upload.microsoft.com/your-profile/office2", // Link upload untuk Office
+      },
     ],
+  };
+
+  // Fungsi untuk mengganti kategori dan mengembalikan Swiper ke slide pertama
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(0); // Kembalikan ke slide pertama
+    }
   };
 
   return (
@@ -45,7 +78,7 @@ const ProjectSection = () => {
         {/* Category Section */}
         <div className="flex justify-center space-x-8 mb-8">
           <button
-            onClick={() => setActiveCategory("Web Development")}
+            onClick={() => handleCategoryChange("Web Development")}
             className={`text-lg md:text-xl font-semibold italic ${
               activeCategory === "Web Development"
                 ? "underline decoration-blue-500 text-white"
@@ -55,7 +88,7 @@ const ProjectSection = () => {
             Web Development
           </button>
           <button
-            onClick={() => setActiveCategory("Graphic Design")}
+            onClick={() => handleCategoryChange("Graphic Design")}
             className={`text-lg md:text-xl font-semibold italic ${
               activeCategory === "Graphic Design"
                 ? "underline decoration-blue-500 text-white"
@@ -65,7 +98,7 @@ const ProjectSection = () => {
             Graphic Design
           </button>
           <button
-            onClick={() => setActiveCategory("Microsoft Office")}
+            onClick={() => handleCategoryChange("Microsoft Office")}
             className={`text-lg md:text-xl font-semibold italic ${
               activeCategory === "Microsoft Office"
                 ? "underline decoration-blue-500 text-white"
@@ -83,19 +116,23 @@ const ProjectSection = () => {
           spaceBetween={30}
           slidesPerView={1}
           className="w-full"
+          onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
         >
           {projects[activeCategory].map((project) => (
             <SwiperSlide key={project.id}>
               <div className="flex justify-center items-center">
                 <div className="text-center">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="rounded-xl mx-auto"
-                  />
-                  <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
-                    {project.name}
-                  </p>
+                  {/* Link dibungkus di sekitar gambar dan judul */}
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="rounded-xl mx-auto"
+                    />
+                    <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
+                      {project.name}
+                    </p>
+                  </a>
                 </div>
               </div>
             </SwiperSlide>

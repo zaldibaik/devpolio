@@ -45,12 +45,20 @@ const Skills = () => {
                 </h2>
                 <div className="flex justify-center mt-4 space-x-8">
                   <img
-                    src="path/to/html-icon.png"
+                    src="/path/to/html-icon.png" // Pastikan path benar
                     alt="HTML"
                     className="h-16"
                   />
-                  <img src="path/to/css-icon.png" alt="CSS" className="h-16" />
-                  <img src="path/to/js-icon.png" alt="JS" className="h-16" />
+                  <img
+                    src="/path/to/css-icon.png" // Pastikan path benar
+                    alt="CSS"
+                    className="h-16"
+                  />
+                  <img
+                    src="/path/to/js-icon.png" // Pastikan path benar
+                    alt="JS"
+                    className="h-16"
+                  />
                 </div>
               </div>
             </SwiperSlide>
@@ -62,12 +70,12 @@ const Skills = () => {
                 </h2>
                 <div className="flex justify-center mt-4 space-x-8">
                   <img
-                    src="path/to/laravel-icon.png"
+                    src="/path/to/laravel-icon.png" // Pastikan path benar
                     alt="Laravel"
                     className="h-16"
                   />
                   <img
-                    src="path/to/react-icon.png"
+                    src="/path/to/react-icon.png" // Pastikan path benar
                     alt="React"
                     className="h-16"
                   />
@@ -82,17 +90,17 @@ const Skills = () => {
                 </h2>
                 <div className="flex justify-center mt-4 space-x-8">
                   <img
-                    src="path/to/tailwind-icon.png"
+                    src="/path/to/tailwind-icon.png" // Pastikan path benar
                     alt="Tailwind CSS"
                     className="h-16"
                   />
                   <img
-                    src="path/to/bootstrap-icon.png"
+                    src="/path/to/bootstrap-icon.png" // Pastikan path benar
                     alt="Bootstrap"
                     className="h-16"
                   />
                   <img
-                    src="path/to/pure-css-icon.png"
+                    src="/path/to/pure-css-icon.png" // Pastikan path benar
                     alt="Pure CSS"
                     className="h-16"
                   />

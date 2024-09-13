@@ -5,7 +5,7 @@ const Sidebar = () => {
   const navItems = [
     { to: "/", icon: HomeIcon },
     { to: "/experience", icon: ExperienceIcon },
-    { to: "/skills", icon: SkillsIcon },
+    { to: "/MySkills", icon: SkillsIcon }, // Perubahan dilakukan di sini
     { to: "/projects", icon: ProjectsIcon },
     { to: "/contact", icon: ContactIcon },
   ];
