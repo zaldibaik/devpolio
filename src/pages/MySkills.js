@@ -11,14 +11,14 @@ const Skills = () => {
   // Data skills berdasarkan kategori
   const skills = {
     "Web Development": [
-      { name: "Bahasa", icon: "/path/to/html-icon.png" },
+      { name: "Programming language", icon: "/path/to/html-icon.png" },
       { name: "FrameWork", icon: "/path/to/css-icon.png" },
     ],
     "Graphic Design": [
       { name: "Hardware", icon: "/path/to/photoshop-icon.png" },
     ],
     "Microsoft Office": [
-      { name: "Word", icon: "/path/to/word-icon.png" },
+      { name: "MIcrosoft Office", icon: "/path/to/word-icon.png" },
     ],
   };
 
