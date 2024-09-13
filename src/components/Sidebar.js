@@ -11,16 +11,28 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="item-center md:fixed h-full w-50 flex md:flex-col flex-row text-white pl-10 pt-32">
-      {navItems.map((item, index) => (
-        <Link
-          key={index}
-          to={item.to}
-          className="py-4 hover:bg-blue-700 text-center"
-        >
-          <item.icon />
-        </Link>
-      ))}
+    <div>
+      {/* Sidebar for Desktop */}
+      <div className="hidden md:flex fixed md:w-45 flex-col justify-center md:justify-end text-white md:pt-32">
+        {navItems.map((item, index) => (
+          <Link
+            key={index}
+            to={item.to}
+            className="py-4 hover:bg-blue-100 text-center flex justify-center w-25"
+          >
+            <item.icon />
+          </Link>
+        ))}
+      </div>
+
+      {/* Navbar for Mobile */}
+      <div className="md:hidden fixed bottom-0 w-full flex justify-around text-white py-4">
+        {navItems.map((item, index) => (
+          <Link key={index} to={item.to} className="flex justify-center">
+            <item.icon />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

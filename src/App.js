@@ -11,9 +11,9 @@ import Skills from './pages/Skills';
 function App() {
   return (
     <Router>
-      <div >
+      <div className='bg-customBlue2 container'>
         <Sidebar />
-        <div className="ml-16 w-full">
+        <div className="w-full">
           <Routes>
             <Route path="/" element={<Profile />} />
             <Route path="/experience" element={<Experience />} />
