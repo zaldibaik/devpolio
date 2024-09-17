@@ -19,7 +19,7 @@ const Skills = () => {
   // Data skills berdasarkan kategori
   const skills = {
     "Web Development": [
-      { name: "programming languages", icon: programmingLanguages }, // Kategori Web Development gak ada icon
+      { name: "Programming Languages", icon: programmingLanguages }, // Kategori Web Development gak ada icon
       { name: "Framework", icon: Framework },
       { name: "Framework CSS", icon: Frameworkcss },
     ],
