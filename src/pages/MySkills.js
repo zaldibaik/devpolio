@@ -49,7 +49,7 @@ const Skills = () => {
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Title */}
           <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full" data-aos="zoom-in-down">
-            <h1 className="text-4xl md:text-6xl font-bold italic text-white" >
+            <h1 className="text-4xl md:text-6xl font-bold  text-white" >
               Skills
             </h1>
           </div>
@@ -57,7 +57,7 @@ const Skills = () => {
           <div className="flex justify-center space-x-8 mb-8" data-aos="zoom-in-down">
             <button
               onClick={() => handleCategoryChange("Web Development")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold  ${
                 activeCategory === "Web Development"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -67,7 +67,7 @@ const Skills = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Graphic Design")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold  ${
                 activeCategory === "Graphic Design"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -77,7 +77,7 @@ const Skills = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Microsoft Office")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold  ${
                 activeCategory === "Microsoft Office"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -104,7 +104,7 @@ const Skills = () => {
               {skills[activeCategory].map((skill, index) => (
                 <SwiperSlide key={index}>
                   <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center">
-                    <h2 className="text-2xl md:text-4xl font-bold italic text-white">
+                    <h2 className="text-2xl md:text-4xl font-bold  text-white">
                       {skill.name}
                     </h2>
                     {skill.icon && (

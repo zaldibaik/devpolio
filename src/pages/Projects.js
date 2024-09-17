@@ -75,16 +75,19 @@ const ProjectSection = () => {
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Project Title */}
           <div className="text-center mb-8" data-aos="zoom-in-down">
-            <h1 className="text-5xl md:text-7xl font-bold italic text-white" >
+            <h1 className="text-5xl md:text-7xl font-bold italic text-white">
               Project
             </h1>
           </div>
 
           {/* Category Section */}
-          <div className="flex justify-center space-x-8 mb-8" data-aos="zoom-in-down">
+          <div
+            className="flex justify-center space-x-8 mb-8"
+            data-aos="zoom-in-down"
+          >
             <button
               onClick={() => handleCategoryChange("Web Development")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold  ${
                 activeCategory === "Web Development"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -94,7 +97,7 @@ const ProjectSection = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Graphic Design")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold  ${
                 activeCategory === "Graphic Design"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -104,7 +107,7 @@ const ProjectSection = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Microsoft Office")}
-              className={`md:text-lg md:text-xl md:font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold ${
                 activeCategory === "Microsoft Office"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -121,11 +124,13 @@ const ProjectSection = () => {
             slidesPerView={1}
             className="w-full"
             onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
-            
           >
             {projects[activeCategory].map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="flex justify-center items-center pb-10" data-aos="zoom-in-up">
+                <div
+                  className="flex justify-center items-center pb-10"
+                  data-aos="zoom-in-up"
+                >
                   <div className="text-center">
                     {/* Link dibungkus di sekitar gambar dan judul */}
                     <a
