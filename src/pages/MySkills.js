@@ -49,12 +49,12 @@ const Skills = () => {
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Title */}
           <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full">
-            <h1 className="text-4xl md:text-6xl font-bold italic text-white">
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white" data-aos="zoom-in-down">
               Skills
             </h1>
           </div>
 
-          <div className="flex justify-center space-x-8 mb-8">
+          <div className="flex justify-center space-x-8 mb-8" >
             <button
               onClick={() => handleCategoryChange("Web Development")}
               className={`md:text-lg md:text-xl md:font-semibold italic ${
@@ -88,7 +88,7 @@ const Skills = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="relative mt-8">
+          <div className="relative mt-8" data-aos="zoom-in-up">
             <Swiper
               modules={[Pagination, Navigation]}
               pagination={{ clickable: true }}
