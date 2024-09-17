@@ -40,7 +40,7 @@ const Skills = () => {
   };
 
   return (
-    <div data-aos="fade-up-left"
+    <div
       id="Skills"
       className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10"
     >
@@ -48,13 +48,13 @@ const Skills = () => {
       <div className="w-full max-w-4xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Title */}
-          <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full">
-            <h1 className="text-4xl md:text-6xl font-bold italic text-white" data-aos="zoom-in-down">
+          <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full" data-aos="zoom-in-down">
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white" >
               Skills
             </h1>
           </div>
 
-          <div className="flex justify-center space-x-8 mb-8" >
+          <div className="flex justify-center space-x-8 mb-8" data-aos="zoom-in-down">
             <button
               onClick={() => handleCategoryChange("Web Development")}
               className={`md:text-lg md:text-xl md:font-semibold italic ${
