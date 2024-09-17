@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div>
       {/* Sidebar for Desktop */}
-      <div className="hidden md:flex fixed md:w-45 flex-col justify-center md:justify-end text-white md:pt-32">
+      <div className="hidden md:flex fixed md:w-45 flex-col justify-center md:justify-end text-white md:pt-12">
         {navItems.map((item, index) => (
           <Link
             key={index}
