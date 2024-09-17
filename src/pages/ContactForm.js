@@ -8,7 +8,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "62822381132"; // Ganti dengan nomor WhatsApp kamu
+    const phoneNumber = "6282238113283"; // Ganti dengan nomor WhatsApp kamu
     const textMessage = `Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${textMessage}`;
     window.open(whatsappUrl, "_blank");
@@ -26,7 +26,7 @@ const ContactForm = () => {
           />
           <h2 className="text-xl font-bold mb-2">Zaldi</h2>
           <p className="text-sm mb-2">zaldiallan4083@gmail.com</p>
-          <p className="text-sm mb-2">081316162222</p>
+          <p className="text-sm mb-2">082238113283</p>
           <p className="text-sm mb-2">IG: Zal_Zaldi</p>
           <p className="text-sm mb-2">LinkedIn: Zaldi-</p>
           <p className="text-sm mb-2">GitHub: zaldibaik</p>
