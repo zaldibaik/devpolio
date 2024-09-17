@@ -32,15 +32,27 @@ const Profile = () => {
 
           {/* Deskripsi */}
           <p className="text-white leading-relaxed text-sm md:text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
           </p>
         </div>
 
         {/* Right Side: Additional Description */}
         <div className="flex flex-col items-center justify-center space-y-4 md:space-y-6 text-center pb-10">
+          <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full">
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white">
+              Profile
+            </h1>
+          </div>
           <div className="bg-customBlue2 rounded-xl p-6 md:p-8 w-full h-full">
             <p className="text-white italic leading-relaxed text-sm md:text-base text-justify-center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
             </p>
           </div>
         </div>
