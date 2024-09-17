@@ -84,7 +84,7 @@ const ProjectSection = () => {
           <div className="flex justify-center space-x-8 mb-8">
             <button
               onClick={() => handleCategoryChange("Web Development")}
-              className={`text-lg md:text-xl font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold italic ${
                 activeCategory === "Web Development"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -94,7 +94,7 @@ const ProjectSection = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Graphic Design")}
-              className={`text-lg md:text-xl font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold italic ${
                 activeCategory === "Graphic Design"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
@@ -104,7 +104,7 @@ const ProjectSection = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("Microsoft Office")}
-              className={`text-lg md:text-xl font-semibold italic ${
+              className={`md:text-lg md:text-xl md:font-semibold italic ${
                 activeCategory === "Microsoft Office"
                   ? "underline decoration-blue-500 text-white"
                   : "text-gray-400"
