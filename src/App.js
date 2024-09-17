@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
@@ -12,6 +11,8 @@ function App() {
   return (
     <Router>
       <div className="bg-customBlue2 w-full flex">
+        <audio src="/sounds/dark.mp3" autoPlay loop />
+
         <div className="fixed top-0 left-0 z-50 md:ml-10 md:mt-10">
           <Sidebar />
         </div>

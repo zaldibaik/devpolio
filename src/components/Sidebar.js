@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Fungsi untuk memutar suara
+const playSound = () => {
+  const audio = new Audio("/sounds/din.mp3");
+  audio.play();
+};
+
 const Sidebar = () => {
   const navItems = [
     { to: "/", icon: HomeIcon },
@@ -19,6 +25,7 @@ const Sidebar = () => {
             key={index}
             to={item.to}
             className="py-4 hover:bg-blue-100 text-center flex justify-center w-25"
+            onClick={playSound} // Menambahkan efek suara ketika tombol di klik
           >
             <item.icon />
           </Link>
@@ -28,7 +35,12 @@ const Sidebar = () => {
       {/* Navbar for Mobile */}
       <div className="md:hidden bg-customBlue2 fixed bottom-0 w-full flex justify-around text-white py-4">
         {navItems.map((item, index) => (
-          <Link key={index} to={item.to} className="flex justify-center">
+          <Link
+            key={index}
+            to={item.to}
+            className="flex justify-center"
+            onClick={playSound} // Menambahkan efek suara ketika tombol di klik
+          >
             <item.icon />
           </Link>
         ))}
@@ -36,7 +48,6 @@ const Sidebar = () => {
     </div>
   );
 };
-
 // Icon components
 const HomeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
