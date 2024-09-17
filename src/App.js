@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="bg-customBlue2 w-full flex">
-        <div className="fixed top-0 left-0 z-50 md:ml-20 md:mt-10">
+        <div className="fixed top-0 left-0 z-50 md:ml-10 md:mt-10">
           <Sidebar />
         </div>
         <div className="w-full ml-[width of sidebar]">
