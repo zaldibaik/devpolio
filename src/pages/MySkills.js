@@ -40,7 +40,7 @@ const Skills = () => {
   };
 
   return (
-    <div
+    <div data-aos="fade-up-left"
       id="Skills"
       className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10"
     >

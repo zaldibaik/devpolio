@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import myprofile from "../pages/assets/myprofile.png"; // Sesuaikan path gambar
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const phoneNumber = "6282238113283"; // Ganti dengan nomor WhatsApp kamu
+    const textMessage = `Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${textMessage}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
-    <div className="bg-customBlue2 min-h-screen text-white flex justify-center items-center overflow-hidden pb-12 md:pb-0">
+    <div data-aos="fade-down" className="bg-customBlue2 min-h-screen text-white flex justify-center items-center overflow-hidden pb-12 md:pb-0">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 rounded-xl p-10">
         {/* Left Side: Profile Section */}
         <div className="flex flex-col items-center text-center">
@@ -28,12 +40,14 @@ const ContactForm = () => {
             </h1>
           </div>
           <div className="bg-customBlue2 mt-4 rounded-xl">
-            <form className="m-8">
+            <form className="m-8" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input
                   className="w-full px-4 py-2 bg-gray-300 text-customBlue2 rounded-lg"
                   type="text"
                   placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -41,6 +55,8 @@ const ContactForm = () => {
                   className="w-full px-4 py-2 bg-gray-300 text-customBlue2 rounded-lg"
                   type="email"
                   placeholder="Your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -48,11 +64,13 @@ const ContactForm = () => {
                   className="w-full px-4 py-2 bg-gray-300 text-customBlue2 rounded-lg"
                   rows="4"
                   placeholder="Your message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <div className="flex justify-center">
-                <button className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">
-                  Submit
+                <button type="submit" className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">
+                  Submit via WhatsApp
                 </button>
               </div>
             </form>
@@ -61,6 +79,6 @@ const ContactForm = () => {
       </div>
     </div>
   );
-}; 
+};
 
 export default ContactForm;

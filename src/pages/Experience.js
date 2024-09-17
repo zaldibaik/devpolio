@@ -7,7 +7,7 @@ import { Pagination } from "swiper/modules";
 
 const Experience = () => {
   return (
-    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10">
+    <div data-aos="fade-right" className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10">
       {/* Main Content */}
       <div className="w-full max-w-4xl px-4 py-8">
         <div className="bg-customBlue rounded-xl p-4 md:p-8">
