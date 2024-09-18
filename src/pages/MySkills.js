@@ -27,7 +27,7 @@ const Skills = () => {
       { name: "Hardware", icon: toolsDesignIcon }, // Graphic Design ada icon hardware
     ],
     "Microsoft Office": [
-      { name: "Word", icon: toolsWordIcon }, // Microsoft Office ada icon Word
+      { name: "Hardware", icon: toolsWordIcon }, // Microsoft Office ada icon Word
     ],
   };
 
