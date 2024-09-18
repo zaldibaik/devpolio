@@ -108,7 +108,7 @@ const Skills = () => {
                       {skill.name}
                     </h2>
                     {skill.icon && (
-                      <div className="flex justify-center mt-4 space-x-8">
+                      <div className="flex justify-center mt-4 space-x-8" >
                         <img
                           src={skill.icon}
                           alt={skill.name}

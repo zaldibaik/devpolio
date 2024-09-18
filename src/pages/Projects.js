@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules"; // Import Navigation untuk panah
+import "swiper/css/pagination"; // Tambahkan CSS untuk pagination
+import { Navigation, Pagination } from "swiper/modules"; // Import Pagination
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
@@ -118,40 +118,59 @@ const ProjectSection = () => {
           </div>
 
           {/* Carousel Section */}
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            className="w-full"
-            onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
-          >
-            {projects[activeCategory].map((project) => (
-              <SwiperSlide key={project.id}>
-                <div
-                  className="flex justify-center items-center pb-10"
-                  data-aos="zoom-in-up"
-                >
-                  <div className="text-center">
-                    {/* Link dibungkus di sekitar gambar dan judul */}
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
-                        {project.name}
-                      </p>
-                    </a>
+          <div className="relative">
+            {/* Panah Kiri */}
+            <button
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              ← {/* Panah kiri kecil */}
+            </button>
+
+            {/* Panah Kanan */}
+            <button
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              → {/* Panah kanan kecil */}
+            </button>
+
+            <Swiper
+              modules={[Navigation, Pagination]} // Tambahkan Pagination di sini
+              spaceBetween={30}
+              slidesPerView={1}
+              className="w-full"
+              pagination={{ clickable: true }} // Aktifkan pagination yang bisa diklik
+              onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
+            >
+              {projects[activeCategory].map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div
+                    className="flex justify-center items-center pb-10"
+                    data-aos="zoom-in-up"
+                  >
+                    <div className="text-center">
+                      {/* Link dibungkus di sekitar gambar dan judul */}
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          className="rounded-xl mx-auto"
+                        />
+                        <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
+                          {project.name}
+                        </p>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

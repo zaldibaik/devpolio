@@ -3,13 +3,14 @@ import myprofile from "../pages/assets/myprofile.png"; // Sesuaikan path gambar
 
 const ContactForm = () => {
   const [name, setName] = useState("");
+  const [nameInstagram, setNameInstagram] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "6282238113283"; // Ganti dengan nomor WhatsApp kamu
-    const textMessage = `Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+    const phoneNumber = "628228113283"; // Ganti dengan nomor WhatsApp kamu
+    const textMessage = `Nama: ${name}%0AEmail: ${email} %0AName Instagram: ${nameInstagram}%0APesan: ${message}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${textMessage}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -48,6 +49,15 @@ const ContactForm = () => {
                   placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="mb-4">
+                <input
+                  className="w-full px-4 py-2 bg-gray-300 text-customBlue2 rounded-lg"
+                  type="text"
+                  placeholder="Your name Instagram"
+                  value={nameInstagram}
+                  onChange={(e) => setNameInstagram(e.target.value)}
                 />
               </div>
               <div className="mb-4">

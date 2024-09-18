@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Fungsi untuk memutar suara
 const playSound = () => {
   const audio = new Audio("/sounds/din.mp3");
-  audio.play();
+  audio.play(); // Perbaikan variabel audio
 };
 
 const Sidebar = () => {
@@ -25,7 +25,7 @@ const Sidebar = () => {
             key={index}
             to={item.to}
             className="py-4 hover:bg-blue-100 text-center flex justify-center w-25"
-            onClick={playSound} // Menambahkan efek suara ketika tombol di klik
+            onClick={playSound} // Menambahkan efek suara ketika tombol diklik
           >
             <item.icon />
           </Link>
@@ -39,7 +39,7 @@ const Sidebar = () => {
             key={index}
             to={item.to}
             className="flex justify-center"
-            onClick={playSound} // Menambahkan efek suara ketika tombol di klik
+            onClick={playSound} // Menambahkan efek suara ketika tombol diklik
           >
             <item.icon />
           </Link>
@@ -50,12 +50,37 @@ const Sidebar = () => {
 };
 // Icon components
 const HomeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
-  <path d="M0 0H39V39H0V0Z" fill="white" fill-opacity="0.01"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4999 35.75C28.4745 35.75 35.7499 28.4746 35.7499 19.5C35.7499 10.5254 28.4745 3.25 19.4999 3.25C10.5253 3.25 3.24991 10.5254 3.24991 19.5C3.24991 28.4746 10.5253 35.75 19.4999 35.75Z" stroke="#1229FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M23.5623 14.625C23.5623 16.8686 21.7435 18.6875 19.4998 18.6875C17.2562 18.6875 15.4373 16.8686 15.4373 14.625C15.4373 12.3814 17.2562 10.5625 19.4998 10.5625C21.7435 10.5625 23.5623 12.3814 23.5623 14.625Z" stroke="#1229FF" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M8.14274 31.1448C8.42199 26.9105 11.9449 23.5625 16.2499 23.5625H22.7499C27.0491 23.5625 30.5685 26.9016 30.8559 31.1279" stroke="#1229FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="39"
+    height="39"
+    viewBox="0 0 39 39"
+    fill="none"
+  >
+    <path d="M0 0H39V39H0V0Z" fill="white" fill-opacity="0.01" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M19.4999 35.75C28.4745 35.75 35.7499 28.4746 35.7499 19.5C35.7499 10.5254 28.4745 3.25 19.4999 3.25C10.5253 3.25 3.24991 10.5254 3.24991 19.5C3.24991 28.4746 10.5253 35.75 19.4999 35.75Z"
+      stroke="#1229FF"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M23.5623 14.625C23.5623 16.8686 21.7435 18.6875 19.4998 18.6875C17.2562 18.6875 15.4373 16.8686 15.4373 14.625C15.4373 12.3814 17.2562 10.5625 19.4998 10.5625C21.7435 10.5625 23.5623 12.3814 23.5623 14.625Z"
+      stroke="#1229FF"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8.14274 31.1448C8.42199 26.9105 11.9449 23.5625 16.2499 23.5625H22.7499C27.0491 23.5625 30.5685 26.9016 30.8559 31.1279"
+      stroke="#1229FF"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
 );
 
 const ExperienceIcon = () => (
