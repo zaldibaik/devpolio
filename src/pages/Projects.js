@@ -74,102 +74,105 @@ const ProjectSection = () => {
       <div className="w-full max-w-4xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Project Title */}
-          <div className="text-center mb-8" data-aos="zoom-in-down">
-            <h1 className="text-5xl md:text-7xl font-bold italic text-white">
-              Project
-            </h1>
-          </div>
+          <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5"data-aos="zoom-in-down">
+            <div className="text-center mb-8" >
+              <h1 className="text-5xl md:text-7xl font-bold italic text-white">
+                Project
+              </h1>
+            </div>
 
-          {/* Category Section */}
-          <div
-            className="flex justify-center space-x-8 mb-8"
-            data-aos="zoom-in-down"
-          >
-            <button
-              onClick={() => handleCategoryChange("Web Development")}
-              className={`md:text-lg md:text-xl md:font-semibold  ${
-                activeCategory === "Web Development"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
+            {/* Category Section */}
+            <div className="flex justify-center space-x-8 mb-8"
+              data-aos="zoom-in-down"
             >
-              Web Development
-            </button>
-            <button
-              onClick={() => handleCategoryChange("Graphic Design")}
-              className={`md:text-lg md:text-xl md:font-semibold  ${
-                activeCategory === "Graphic Design"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
-            >
-              Graphic Design
-            </button>
-            <button
-              onClick={() => handleCategoryChange("Microsoft Office")}
-              className={`md:text-lg md:text-xl md:font-semibold ${
-                activeCategory === "Microsoft Office"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
-            >
-              Microsoft Office
-            </button>
+              <button
+                onClick={() => handleCategoryChange("Web Development")}
+                className={`md:text-lg md:text-xl md:font-semibold  ${
+                  activeCategory === "Web Development"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Web Development
+              </button>
+              <button
+                onClick={() => handleCategoryChange("Graphic Design")}
+                className={`md:text-lg md:text-xl md:font-semibold  ${
+                  activeCategory === "Graphic Design"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Graphic Design
+              </button>
+              <button
+                onClick={() => handleCategoryChange("Microsoft Office")}
+                className={`md:text-lg md:text-xl md:font-semibold ${
+                  activeCategory === "Microsoft Office"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Microsoft Office
+              </button>
+            </div>
           </div>
 
           {/* Carousel Section */}
-          <div className="relative">
-            {/* Panah Kiri */}
-            <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              ← {/* Panah kiri kecil */}
-            </button>
+          <div className="bg-customBlue2 rounded-xl p-3 md:p-5" data-aos="zoom-in-up">
+            <div className="relative">
+              {/* Panah Kiri */}
+              <button
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
+                onClick={() => swiperRef.current?.slidePrev()}
+              >
+                ← {/* Panah kiri kecil */}
+              </button>
 
-            {/* Panah Kanan */}
-            <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              → {/* Panah kanan kecil */}
-            </button>
+              {/* Panah Kanan */}
+              <button
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
+                onClick={() => swiperRef.current?.slideNext()}
+              >
+                → {/* Panah kanan kecil */}
+              </button>
 
-            <Swiper
-              modules={[Navigation, Pagination]} // Tambahkan Pagination di sini
-              spaceBetween={30}
-              slidesPerView={1}
-              className="w-full"
-              pagination={{ clickable: true }} // Aktifkan pagination yang bisa diklik
-              onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
-            >
-              {projects[activeCategory].map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div
-                    className="flex justify-center items-center pb-10"
-                    data-aos="zoom-in-up"
-                  >
-                    <div className="text-center">
-                      {/* Link dibungkus di sekitar gambar dan judul */}
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src={project.image}
-                          alt={project.name}
-                          className="rounded-xl mx-auto"
-                        />
-                        <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
-                          {project.name}
-                        </p>
-                      </a>
+              <Swiper
+                modules={[Navigation, Pagination]} // Tambahkan Pagination di sini
+                spaceBetween={30}
+                slidesPerView={1}
+                className="w-full"
+                pagination={{ clickable: true }} // Aktifkan pagination yang bisa diklik
+                onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
+              >
+                {projects[activeCategory].map((project) => (
+                  <SwiperSlide key={project.id}>
+                    <div
+                      className="flex justify-center items-center pb-10"
+                      
+                    >
+                      <div className="text-center">
+                        {/* Link dibungkus di sekitar gambar dan judul */}
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
+                            {project.name}
+                          </p>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>

@@ -48,45 +48,50 @@ const Skills = () => {
       <div className="w-full max-w-4xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Title */}
-          <div className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full" data-aos="zoom-in-down">
-            <h1 className="text-4xl md:text-6xl font-bold  text-white" >
+          <div
+            className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full"
+            data-aos="zoom-in-down"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold  text-white">
               Skills
             </h1>
-          </div>
 
-          <div className="flex justify-center space-x-8 mb-8" data-aos="zoom-in-down">
-            <button
-              onClick={() => handleCategoryChange("Web Development")}
-              className={`md:text-lg md:text-xl md:font-semibold  ${
-                activeCategory === "Web Development"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
+            <div
+              className="flex justify-center space-x-8 mb-1 mt-3 "
+              data-aos="zoom-in-down"
             >
-              Web Development
-            </button>
-            <button
-              onClick={() => handleCategoryChange("Graphic Design")}
-              className={`md:text-lg md:text-xl md:font-semibold  ${
-                activeCategory === "Graphic Design"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
-            >
-              Graphic Design
-            </button>
-            <button
-              onClick={() => handleCategoryChange("Microsoft Office")}
-              className={`md:text-lg md:text-xl md:font-semibold  ${
-                activeCategory === "Microsoft Office"
-                  ? "underline decoration-blue-500 text-white"
-                  : "text-gray-400"
-              }`}
-            >
-              Microsoft Office
-            </button>
+              <button
+                onClick={() => handleCategoryChange("Web Development")}
+                className={`md:text-lg md:text-xl md:font-semibold  ${
+                  activeCategory === "Web Development"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Web Development
+              </button>
+              <button
+                onClick={() => handleCategoryChange("Graphic Design")}
+                className={`md:text-lg md:text-xl md:font-semibold  ${
+                  activeCategory === "Graphic Design"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Graphic Design
+              </button>
+              <button
+                onClick={() => handleCategoryChange("Microsoft Office")}
+                className={`md:text-lg md:text-xl md:font-semibold  ${
+                  activeCategory === "Microsoft Office"
+                    ? "underline decoration-blue-500 text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                Microsoft Office
+              </button>
+            </div>
           </div>
-
           {/* Carousel Section */}
           <div className="relative mt-8" data-aos="zoom-in-up">
             <Swiper
@@ -108,7 +113,7 @@ const Skills = () => {
                       {skill.name}
                     </h2>
                     {skill.icon && (
-                      <div className="flex justify-center mt-4 space-x-8" >
+                      <div className="flex justify-center mt-4 space-x-8">
                         <img
                           src={skill.icon}
                           alt={skill.name}
