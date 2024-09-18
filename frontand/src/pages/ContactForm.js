@@ -37,7 +37,7 @@ const ContactForm = () => {
         <div className="flex flex-col justify-center"data-aos="fade-left">
           <div className="bg-customBlue2 rounded-xl p-6 md:p-8">
             <h1 className="text-4xl md:text-6xl font-bold italic text-white text-center">
-              Contact me
+              Contact Zaldi
             </h1>
           </div>
           <div className="bg-customBlue2 mt-4 rounded-xl">
