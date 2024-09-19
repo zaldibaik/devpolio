@@ -63,7 +63,7 @@ const Profile = () => {
               Hobi aku adalah bermain game mobile seperti PUBG, Mobile Legends,
               dan lainnya. Selain itu, aku juga suka menggambar, mendesain, dan
               membangun website. Meskipun belum menguasai bidang backend
-              development, aku lebih senang di bidang frontend.
+              development, namu aku akn selalu coba untuk belajar dan baelaja.
             </p>
           </div>
         </div>
