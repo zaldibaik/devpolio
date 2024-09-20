@@ -5,36 +5,64 @@ import "swiper/css/pagination";
 // Import modul Pagination saja
 import { Pagination } from "swiper/modules";
 
-const Experience = () => {
+const Resume = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden md:pb-0 pb-20">
       {/* Main Content */}
       <div className="w-full max-w-5xl">
         <div className="bg-customBlue rounded-xl p-4 md:p-8">
-          {/* Experience Title */}
+          {/* Resume Title */}
           <div
-            className="bg-customBlue2 rounded-xl p-6 md:p-10 text-center"
+            className=" rounded-xl p-6 md:p-10 text-center"
             data-aos="zoom-in-down"
           >
             <h1 className="text-4xl md:text-6xl font-bold italic text-white">
-              Experience
+              Resume
             </h1>
           </div>
-
-          {/* Logos and Text in Swiper */}
+          <div
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center"
+            data-aos="zoom-in-down"
+          >
+            <h1 className="text-2xl md:text-4xl font-bold italic text-white">
+              Education
+            </h1>
+          </div>
           <Swiper
             pagination={{ clickable: true }}
             modules={[Pagination]} // Hanya menggunakan Pagination
-            className="mt-8"
+            className="mt-2"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
+              <SwiperSlide>
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="flex flex-col items-center space-y-4 md:space-y-6">
+                  </div>
+                  <div className="mt-4 md:mt-6">
+                  <div className="text-xl text-3xl md:text-5xl font-bold text-white">
+                      SMPN 7 Angge Raja
+                    </div>
+                    <div className="text-xl md:text-2xl font-bold text-white mt-6">
+                      2018 - 2020
+                    </div>
+                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 2 */}
               <SwiperSlide>
                 <div
                   className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3"
                   data-aos="zoom-in-up"
                 >
-
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +169,11 @@ const Experience = () => {
                     </svg>
                   </div>
                   <div className="mt-4 md:mt-6">
-                    <div className="text-xl md:text-2xl font-bold text-white">
-                      Pelajar Di SMK TI BAZMA selama 4 tahun
+                  <div className="text-xl text-3xl md:text-5xl font-bold text-white">
+                      SMK TI BAZMA
+                    </div>
+                    <div className="text-xl md:text-2xl font-bold text-white mt-6">
+                      2021 - present
                     </div>
                     <p className="text-sm md:text-base text-white leading-relaxed mt-3">
                       Lorem Ipsum is simply dummy text of the printing and
@@ -155,6 +186,61 @@ const Experience = () => {
                 </div>
               </SwiperSlide>
 
+              {/* Slide 3 */}
+              <SwiperSlide>
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="flex flex-col items-center space-y-4 md:space-y-6">
+                    <svg
+                      fill="#ffffff"
+                      width="80px"
+                      height="80px"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Layer_1"
+                      data-name="Layer 1"
+                    >
+                      <path d="M8.49,12.68v4.61c0,.34,.23,.61,.53,.71v5.48c0,.13-.14,3.21,1.88,5.34,1.22,1.28,2.93,1.94,5.09,1.94s3.88-.65,5.09-1.94c2.02-2.13,1.89-5.21,1.88-5.3v-5.52c.3-.1,.53-.37,.53-.71v-4.61c1.71-.69,2.92-2.36,2.92-4.32,0-2.57-2.09-4.67-4.67-4.67-.49,0-.98,.08-1.46,.23-1.09-1.67-2.93-2.68-4.94-2.68s-3.68,.91-4.79,2.46c-2.74-.22-5.01,1.96-5.01,4.65,0,1.96,1.21,3.63,2.92,4.32Zm11.51,15.11c-.92,.97-2.27,1.46-4,1.46s-3.07-.49-4-1.46c-1.58-1.66-1.48-4.21-1.48-4.28v-5.48h10.96v5.51s.1,2.58-1.48,4.24Zm2.01-14.77v3.51H9.99v-3.51h12.02ZM10.23,5.19c.21,0,.4,.02,.59,.05,.3,.05,.61-.09,.77-.35,.81-1.34,2.22-2.15,3.78-2.15,1.68,0,3.19,.94,3.95,2.45,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.45-.23,.95-.35,1.44-.35,1.75,0,3.17,1.42,3.17,3.17s-1.42,3.17-3.17,3.17H10.23c-1.75,0-3.17-1.42-3.17-3.17s1.42-3.17,3.17-3.17Z" />
+                      <path d="M14.26,5.25c1.5,.28,2.59,1.59,2.59,3.11,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.24-1.6-4.17-3.81-4.59-.4-.07-.8,.19-.88,.6-.08,.41,.19,.8,.6,.88Z" />
+                      <circle cx="13.32" cy="20.07" r="1.25" />
+                      <circle cx="18.68" cy="20.07" r="1.25" />
+                      <path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
+                    </svg>
+                  </div>
+                  <div className="mt-4 md:mt-7">
+                    <div className="text-xl md:text-2xl font-bold text-white">
+                      Lorem Ipsum is simply dummy
+                    </div>
+                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </div>
+
+            {/* Add more slides as needed */}
+          </Swiper>
+          <div
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center"
+            data-aos="zoom-in-down"
+          >
+            <h1 className="text-2xl md:text-4xl font-bold italic text-white">
+              Experience
+            </h1>
+          </div>
+
+          {/* Logos and Text in Swiper */}
+          <Swiper
+            pagination={{ clickable: true }}
+            modules={[Pagination]} // Hanya menggunakan Pagination
+            className="mt-2"
+          >
+            {/* Slide 1 */}
+            <div data-aos="zoom-in-up">
               {/* Slide 2 */}
               <SwiperSlide>
                 <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
@@ -251,4 +337,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Resume;

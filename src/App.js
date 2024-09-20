@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Profile from "./pages/Profile";
-import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import ContactForm from "./pages/ContactForm";
 import MySkills from "./pages/MySkills";
 import Loading from "./components/Loading"; // Import komponen loading
+import Resume from "./pages/Resume";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ function App() {
         <div className="w-full ml-[width of sidebar]">
           <Routes>
             <Route path="/" element={<Profile />} />
-            <Route path="/experience" element={<Experience />} />
+            <Route path="/Resume" element={<Resume />} />
             <Route path="/MySkills" element={<MySkills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<ContactForm />} />

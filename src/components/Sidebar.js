@@ -14,10 +14,10 @@ const Sidebar = () => {
   const navItems = [
     { to: "/", icon: profileIcon, activeIcon: profileIconActive, name: "profile" },
     {
-      to: "/experience",
-      icon: ExperienceIcon,
-      activeIcon: ExperienceIconActive,
-      name: "Experience",
+      to: "/resume",
+      icon: resumeIcon,
+      activeIcon: resumeIconActive,
+      name: "resume",
     },
     {
       to: "/MySkills",
@@ -143,7 +143,7 @@ const profileIconActive = () => (
   </svg>
 );
 
-const ExperienceIconActive = () => (
+const resumeIconActive = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="40"
@@ -332,7 +332,7 @@ const profileIcon = () => (
   </svg>
 );
 
-const ExperienceIcon = () => (
+const resumeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="40"
