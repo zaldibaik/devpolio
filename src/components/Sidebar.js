@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // Fungsi untuk memutar suara
 const playSound = () => {
@@ -9,6 +9,7 @@ const playSound = () => {
 
 const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Menyimpan indeks item yang aktif
+  const location = useLocation(); // Dapatkan lokasi saat ini
 
   const navItems = [
     { to: "/", icon: HomeIcon, activeIcon: HomeIconActive, name: "Home" },
@@ -37,6 +38,14 @@ const Sidebar = () => {
       name: "Contact",
     },
   ];
+
+  // Gunakan useEffect untuk memantau perubahan rute dan set tombol yang aktif
+  useEffect(() => {
+    const currentIndex = navItems.findIndex(
+      (item) => item.to === location.pathname
+    );
+    setActiveIndex(currentIndex);
+  }, [location.pathname]);
 
   return (
     <div>
@@ -97,7 +106,6 @@ const Sidebar = () => {
   );
 };
 
-// ... (komponen icon tetap sama)
 
 // Icon components
 const HomeIconActive = () => (
