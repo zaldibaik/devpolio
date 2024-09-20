@@ -12,7 +12,7 @@ const Sidebar = () => {
   const location = useLocation(); // Dapatkan lokasi saat ini
 
   const navItems = [
-    { to: "/", icon: HomeIcon, activeIcon: HomeIconActive, name: "Home" },
+    { to: "/", icon: profileIcon, activeIcon: profileIconActive, name: "profile" },
     {
       to: "/experience",
       icon: ExperienceIcon,
@@ -108,7 +108,7 @@ const Sidebar = () => {
 
 
 // Icon components
-const HomeIconActive = () => (
+const profileIconActive = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +297,7 @@ const ContactIconActive = () => (
   </svg>
 );
 
-const HomeIcon = () => (
+const profileIcon = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"

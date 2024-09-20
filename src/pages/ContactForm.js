@@ -16,7 +16,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen text-white flex justify-center items-center overflow-hidden pb-12 md:pb-0">
+    <div className="min-h-screen bg- text-white flex justify-center items-center overflow-hidden pb-12 md:pb-0">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 rounded-xl p-10">
         {/* Left Side: Profile Section */}
         <div className="flex flex-col items-center text-center" data-aos="fade-right">
@@ -35,12 +35,12 @@ const ContactForm = () => {
 
         {/* Right Side: Contact Form */}
         <div className="flex flex-col justify-center"data-aos="fade-left">
-          <div className="bg-customBlue2 rounded-xl p-6 md:p-8">
+          <div className="rounded-xl p-6 md:p-8">
             <h1 className="text-4xl md:text-6xl font-bold italic text-white text-center">
               Contact me
             </h1>
           </div>
-          <div className="bg-customBlue2 mt-4 rounded-xl">
+          <div className="mt-4 rounded-xl">
             <form className="m-8" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input

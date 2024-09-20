@@ -4,7 +4,7 @@ import myprofile from "../pages/assets/myprofile.png";
 const Profile = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container bg-customBlue rounded-xl p-6 md:p-10 pb-16 md:pb-0 max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container bg-customBlue rounded-xl p-6 md:p-10 pb-16 max-w-5xl">
         
         {/* Left Side: Profile Picture, Name, CV Button, and Description */}
         <div
