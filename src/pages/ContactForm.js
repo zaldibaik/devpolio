@@ -79,7 +79,7 @@ const ContactForm = () => {
                 ></textarea>
               </div>
               <div className="flex justify-center">
-                <button type="submit" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-6 rounded-lg">
+                <button type="submit" className="bg-blue-500 hover:bg-blue-400 text-white sm font-bold py-1 px-4 rounded-lg">
                   Submit via WhatsApp
                 </button>
               </div>
