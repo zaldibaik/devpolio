@@ -11,7 +11,7 @@ const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Menyimpan indeks item yang aktif
 
   const navItems = [
-    { to: "/", icon: ProfileIcon, activeIcon: ProfileIconActive, name: "Profile" },
+    { to: "/", icon: HomeIcon, activeIcon: HomeIconActive, name: "Home" },
     {
       to: "/experience",
       icon: ExperienceIcon,
@@ -46,7 +46,7 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="py-4 hover:bg-blue-100 text-center flex items-center w-25 active:bg-blue-400"
+            className="py-4 hover:bg-blue-100 text-center flex items-center w-25 active:bg-blue-500 rounded-xl"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
@@ -72,7 +72,7 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="flex flex-col items-center active:bg-blue-400"
+            className="flex flex-col rounded-xl items-center active:bg-blue-400"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
@@ -100,7 +100,7 @@ const Sidebar = () => {
 // ... (komponen icon tetap sama)
 
 // Icon components
-const ProfileIconActive = () => (
+const HomeIconActive = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -289,7 +289,7 @@ const ContactIconActive = () => (
   </svg>
 );
 
-const ProfileIcon = () => (
+const HomeIcon = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Profile from "./pages/Profile";
@@ -6,8 +6,24 @@ import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import ContactForm from "./pages/ContactForm";
 import MySkills from "./pages/MySkills";
+import Loading from "./components/Loading"; // Import komponen loading
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulasi loading selama 2 detik
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Ganti durasi sesuai kebutuhan
+
+    return () => clearTimeout(timer); // Membersihkan timer
+  }, []);
+
+  if (loading) {
+    return <Loading />; // Tampilkan loading jika masih loading
+  }
+
   return (
     <Router>
       <div className="bg-customBlue2 w-full flex">
