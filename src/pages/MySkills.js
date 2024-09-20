@@ -42,10 +42,10 @@ const Skills = () => {
   return (
     <div
       id="Skills"
-      className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden pb-10"
+      className="bg-customBlue2 min-h-screen flex justify-center items-center p-2 overflow-hidden pb-10"
     >
       {/* Main Content */}
-      <div className="w-full max-w-4xl px-4 py-8 mx-auto">
+      <div className="w-full max-w-5xl px-2 py-4 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Title */}
           <div

@@ -9,11 +9,11 @@ const Experience = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden md:pb-0 pb-20">
       {/* Main Content */}
-      <div className="w-full max-w-4xl px-4 py-8">
+      <div className="w-full max-w-5xl">
         <div className="bg-customBlue rounded-xl p-4 md:p-8">
           {/* Experience Title */}
           <div
-            className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center"
+            className="bg-customBlue2 rounded-xl p-6 md:p-10 text-center"
             data-aos="zoom-in-down"
           >
             <h1 className="text-4xl md:text-6xl font-bold italic text-white">
@@ -34,6 +34,7 @@ const Experience = () => {
                   className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3"
                   data-aos="zoom-in-up"
                 >
+
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

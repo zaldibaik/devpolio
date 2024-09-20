@@ -71,7 +71,7 @@ const ProjectSection = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center px-4 md:pb-0 pb-20 md:px-6">
       {/* Main Content */}
-      <div className="w-full max-w-4xl px-4 py-8 mx-auto">
+      <div className="w-full max-w-5xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Project Title */}
           <div
@@ -128,22 +128,6 @@ const ProjectSection = () => {
             data-aos="zoom-in-up"
           >
             <div className="relative">
-              {/* Panah Kiri */}
-              <button
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
-                onClick={() => swiperRef.current?.slidePrev()}
-              >
-                ← {/* Panah kiri kecil */}
-              </button>
-
-              {/* Panah Kanan */}
-              <button
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 rounded-full text-x1"
-                onClick={() => swiperRef.current?.slideNext()}
-              >
-                → {/* Panah kanan kecil */}
-              </button>
-
               <Swiper
                 modules={[Navigation, Pagination]} // Tambahkan Pagination di sini
                 spaceBetween={30}
@@ -154,7 +138,7 @@ const ProjectSection = () => {
               >
                 {projects[activeCategory].map((project) => (
                   <SwiperSlide key={project.id}>
-                    <div className="flex justify-center items-center pb-10">
+                    <div className="flex justify-center items-center pb-10 md:pt-10">
                       <div className="text-center">
                         {/* Link dibungkus di sekitar gambar dan judul */}
                         <a
