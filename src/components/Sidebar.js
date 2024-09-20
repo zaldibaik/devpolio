@@ -11,11 +11,31 @@ const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Menyimpan indeks item yang aktif
 
   const navItems = [
-    { to: "/", icon: HomeIcon, activeIcon: HomeIconActive },
-    { to: "/experience", icon: ExperienceIcon, activeIcon: ExperienceIconActive },
-    { to: "/MySkills", icon: SkillsIcon, activeIcon: SkillsIconActive },
-    { to: "/projects", icon: ProjectsIcon, activeIcon: ProjectsIconActive },
-    { to: "/contact", icon: ContactIcon, activeIcon: ContactIconActive },
+    { to: "/", icon: ProfileIcon, activeIcon: ProfileIconActive, name: "Profile" },
+    {
+      to: "/experience",
+      icon: ExperienceIcon,
+      activeIcon: ExperienceIconActive,
+      name: "Experience",
+    },
+    {
+      to: "/MySkills",
+      icon: SkillsIcon,
+      activeIcon: SkillsIconActive,
+      name: "My Skills",
+    },
+    {
+      to: "/projects",
+      icon: ProjectsIcon,
+      activeIcon: ProjectsIconActive,
+      name: "Projects",
+    },
+    {
+      to: "/contact",
+      icon: ContactIcon,
+      activeIcon: ContactIconActive,
+      name: "Contact",
+    },
   ];
 
   return (
@@ -26,14 +46,22 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="py-4 hover:bg-blue-100 text-center flex justify-center w-25 active:bg-blue-400"
+            className="py-4 hover:bg-blue-100 text-center flex items-center w-25 active:bg-blue-400"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
             }}
           >
-            {/* Ganti icon berdasarkan state aktif */}
             {activeIndex === index ? <item.activeIcon /> : <item.icon />}
+            <span
+              className={`ml-2 transition-opacity ${
+                activeIndex === index
+                  ? "opacity-100 text-blue-500"
+                  : "opacity-0 text-white"
+              }`}
+            >
+              {item.name}
+            </span>
           </Link>
         ))}
       </div>
@@ -44,12 +72,22 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="flex justify-center active:bg-blue-400"
+            className="flex flex-col items-center active:bg-blue-400"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
             }}
           >
+            {/* Tampilkan nama di atas ikon dengan warna teks yang berubah */}
+            <span
+              className={`text-sm mb-1 transition-opacity ${
+                activeIndex === index
+                  ? "opacity-100 text-blue-500"
+                  : "opacity-0 text-white"
+              }`}
+            >
+              {item.name}
+            </span>
             {/* Ganti icon berdasarkan state aktif */}
             {activeIndex === index ? <item.activeIcon /> : <item.icon />}
           </Link>
@@ -58,8 +96,11 @@ const Sidebar = () => {
     </div>
   );
 };
+
+// ... (komponen icon tetap sama)
+
 // Icon components
-const HomeIconActive = () => (
+const ProfileIconActive = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +289,7 @@ const ContactIconActive = () => (
   </svg>
 );
 
-const HomeIcon = () => (
+const ProfileIcon = () => (
   // 1229FF
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 // Import gambar
 import programmingLanguages from "../pages/assets/tools-bhs-pemograman.png"; // Gambar hardware (Graphic Design)
-import toolsWordIcon from "../pages/assets/tools-word.png"; // Gambar Word (Microsoft Office)
+import toolsofficeIcon from "../pages/assets/tools-office.png"; // Gambar office (Microsoft Office)
 import toolsDesignIcon from "../pages/assets/tools-design.png"; // Gambar hardware (Graphic Design)
 import Framework from "../pages/assets/Framework.png"; // Gambar hardware (Graphic Design)
 import Frameworkcss from "../pages/assets/Frameworkcss.png"; // Gambar hardware (Graphic Design)
@@ -24,10 +24,10 @@ const Skills = () => {
       { name: "Framework CSS", icon: Frameworkcss },
     ],
     "Graphic Design": [
-      { name: "Hardware", icon: toolsDesignIcon }, // Graphic Design ada icon hardware
+      { name: "Software", icon: toolsDesignIcon }, // Graphic Design ada icon Software
     ],
     "Microsoft Office": [
-      { name: "Hardware", icon: toolsWordIcon }, // Microsoft Office ada icon Word
+      { name: "Software", icon: toolsofficeIcon }, // Microsoft Office ada icon Software
     ],
   };
 

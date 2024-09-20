@@ -74,15 +74,19 @@ const ProjectSection = () => {
       <div className="w-full max-w-4xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Project Title */}
-          <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5"data-aos="zoom-in-down">
-            <div className="text-center mb-8" >
+          <div
+            className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5"
+            data-aos="zoom-in-down"
+          >
+            <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
                 Project
               </h1>
             </div>
 
             {/* Category Section */}
-            <div className="flex justify-center space-x-8 mb-8"
+            <div
+              className="flex justify-center space-x-8 mb-8"
               data-aos="zoom-in-down"
             >
               <button
@@ -119,7 +123,10 @@ const ProjectSection = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="bg-customBlue2 rounded-xl p-3 md:p-5" data-aos="zoom-in-up">
+          <div
+            className="bg-customBlue2 rounded-xl p-3 md:p-5"
+            data-aos="zoom-in-up"
+          >
             <div className="relative">
               {/* Panah Kiri */}
               <button
@@ -147,10 +154,7 @@ const ProjectSection = () => {
               >
                 {projects[activeCategory].map((project) => (
                   <SwiperSlide key={project.id}>
-                    <div
-                      className="flex justify-center items-center pb-10"
-                      
-                    >
+                    <div className="flex justify-center items-center pb-10">
                       <div className="text-center">
                         {/* Link dibungkus di sekitar gambar dan judul */}
                         <a
@@ -165,6 +169,13 @@ const ProjectSection = () => {
                           />
                           <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
                             {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book
                           </p>
                         </a>
                       </div>
