@@ -14,6 +14,7 @@ const ProjectSection = () => {
       {
         id: 1,
         name: "Project 1",
+        Text : "lorem ipsum Ini project webdeveloper zaldi",
         image:
           "https://image.popmama.com/content-images/community/20230620/community-19d71834eb62929ad943075160605b88.jpg?1726211369",
         link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
@@ -21,6 +22,7 @@ const ProjectSection = () => {
       {
         id: 2,
         name: "Project 2",
+        Text : "lorem ipsum ini yang kedua",
         image:
           "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCDhj1K6gWUt97g14MhdFKwelz-5kW3190rXmiv6w-SjG9AATYTw8CUp8VE17Vaam-o-ugJEGOlxfPkPG66V5Ky78SQX3TgDy31DYuQKMXEr6a26VWX-d2WBTQZWJ_E36BmSxEaudIGgga2L3Mh1fkQwZ-32tvt8241tZP4m_FU3Br4NyxRwTkPnmcALbk/s800/Ultraman-Ginga-S-Movie-Heisei-Ultras.jpg",
         link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
@@ -30,6 +32,7 @@ const ProjectSection = () => {
       {
         id: 3,
         name: "Design 1",
+        Text : "ini desin milik zaldi, jangan di tiru",
         image:
           "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
         link: "https://www.behance.net/your-profile/design1", // Link ke Behance
@@ -37,6 +40,7 @@ const ProjectSection = () => {
       {
         id: 4,
         name: "Design 2",
+        Text : "masih punya zaldi",
         image:
           "https://media.suara.com/pictures/653x366/2021/09/15/19731-kartun-upin-dan-ipin-facebookupinipinofficial.jpg",
         link: "https://www.behance.net/your-profile/design2", // Link ke Behance
@@ -46,6 +50,7 @@ const ProjectSection = () => {
       {
         id: 5,
         name: "Office 1",
+        Text : "lorem ipsum ini tugas word",
         image:
           "https://cdn.idntimes.com/content-images/duniaku/post/20230330/dora-dan-boots-dfc63c106f03db8ea792dcc7647d5be9_600x400.jpg",
         link: "https://upload.microsoft.com/your-profile/office1", // Link upload untuk Office
@@ -53,6 +58,7 @@ const ProjectSection = () => {
       {
         id: 6,
         name: "Office 2",
+        Text : "lorem ipsum Yang ini Exel",
         image:
           "https://d1tgyzt3mf06m9.cloudfront.net/production/media/2018/juni/inilah-aktor-villain-di-live-action-dora-the-explorer/1-inilah-aktor-villain-di-live-action-dora-the-explorer-700x700.jpg",
         link: "https://upload.microsoft.com/your-profile/office2", // Link upload untuk Office
@@ -124,7 +130,7 @@ const ProjectSection = () => {
 
           {/* Carousel Section */}
           <div
-            className="bg-customBlue2 rounded-xl p-3 md:p-5"
+            className="bg-customBlue2 rounded-xl"
             data-aos="zoom-in-up"
           >
             <div className="relative">
@@ -154,13 +160,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and
-                            scrambled it to make a type specimen book
-                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">{project.Text}</p>
                         </a>
                       </div>
                     </div>

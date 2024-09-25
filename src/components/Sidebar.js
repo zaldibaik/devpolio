@@ -55,7 +55,7 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="py-4 hover:bg-blue-100 text-center flex items-center w-25 active:bg-blue-500 rounded-xl"
+            className="py-4  text-center flex items-center w-25 rounded-xl"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
@@ -81,7 +81,7 @@ const Sidebar = () => {
           <Link
             key={index}
             to={item.to}
-            className="flex flex-col rounded-xl items-center active:bg-blue-400"
+            className="flex flex-col rounded-xl items-center"
             onClick={() => {
               playSound();
               setActiveIndex(index); // Set item aktif ketika diklik
