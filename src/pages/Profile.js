@@ -29,9 +29,13 @@ const Profile = () => {
           </p>
 
           {/* Download CV Button */}
-          <button className="bg-blue-700 text-white py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-800 transition-colors">
+          <a 
+            href="/Zaldi.pdf"  // Mengarahkan ke file PDF di folder public
+            download="Zaldi.pdf" // Nama file yang akan diunduh
+            className="bg-blue-700 text-white py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-800 transition-colors"
+          >
             Download CV
-          </button>
+          </a>
         </div>
 
         {/* Right Side: Profile Title and Description */}
@@ -63,7 +67,7 @@ const Profile = () => {
               Hobi aku adalah bermain game mobile seperti PUBG, Mobile Legends,
               dan lainnya. Selain itu, aku juga suka menggambar, mendesain, dan
               membangun website. Meskipun belum menguasai bidang backend
-              development, namun aku akan selalu belajar dan belajar agar aku bisa menhgapai semua cita-citaku.
+              development, namun aku akan selalu belajar dan belajar agar aku bisa mencapai semua cita-citaku.
             </p>
           </div>
         </div>

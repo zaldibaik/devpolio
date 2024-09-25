@@ -13,7 +13,7 @@ const ProjectSection = () => {
     "Web Development": [
       {
         id: 1,
-        name: "Project 1",
+        name: "Website Perpustakaan SMK TI BAZMA",
         Text : "lorem ipsum Ini project webdeveloper zaldi",
         image:
           "https://image.popmama.com/content-images/community/20230620/community-19d71834eb62929ad943075160605b88.jpg?1726211369",
@@ -146,7 +146,6 @@ const ProjectSection = () => {
                   <SwiperSlide key={project.id}>
                     <div className="flex justify-center items-center pb-10 md:pt-10">
                       <div className="text-center">
-                        {/* Link dibungkus di sekitar gambar dan judul */}
                         <a
                           href={project.link}
                           target="_blank"
@@ -157,7 +156,7 @@ const ProjectSection = () => {
                             alt={project.name}
                             className="rounded-xl mx-auto"
                           />
-                          <p className="text-white text-xl md:text-2xl font-semibold italic mt-4">
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
                           <p className="text-sm md:text-base text-white leading-relaxed mt-3">{project.Text}</p>
