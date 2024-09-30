@@ -1,173 +1,408 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination"; // Tambahkan CSS untuk pagination
-import { Navigation, Pagination } from "swiper/modules"; // Import Pagination
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import poster from "./assets/PosterBangor.jpg";
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
-  const swiperRef = useRef(null); // Reference untuk Swiper
+  const swiperRef = useRef(null);
 
-  // Data proyek berdasarkan kategori, dengan link yang sesuai
-  const projects = {
-    "Web Development": [
-      {
-        id: 1,
-        name: "Website Perpustakaan SMK TI BAZMA",
-        Text : "lorem ipsum Ini project webdeveloper zaldi",
-        image:
-          "https://image.popmama.com/content-images/community/20230620/community-19d71834eb62929ad943075160605b88.jpg?1726211369",
-        link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
-      },
-      {
-        id: 2,
-        name: "Project 2",
-        Text : "lorem ipsum ini yang kedua",
-        image:
-          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCDhj1K6gWUt97g14MhdFKwelz-5kW3190rXmiv6w-SjG9AATYTw8CUp8VE17Vaam-o-ugJEGOlxfPkPG66V5Ky78SQX3TgDy31DYuQKMXEr6a26VWX-d2WBTQZWJ_E36BmSxEaudIGgga2L3Mh1fkQwZ-32tvt8241tZP4m_FU3Br4NyxRwTkPnmcALbk/s800/Ultraman-Ginga-S-Movie-Heisei-Ultras.jpg",
-        link: "https://github.com/zaldibaik/portofolio", // Link ke GitHub
-      },
-    ],
-    "Graphic Design": [
-      {
-        id: 3,
-        name: "Design 1",
-        Text : "ini desin milik zaldi, jangan di tiru",
-        image:
-          "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-        link: "https://www.behance.net/your-profile/design1", // Link ke Behance
-      },
-      {
-        id: 4,
-        name: "Design 2",
-        Text : "masih punya zaldi",
-        image:
-          "https://media.suara.com/pictures/653x366/2021/09/15/19731-kartun-upin-dan-ipin-facebookupinipinofficial.jpg",
-        link: "https://www.behance.net/your-profile/design2", // Link ke Behance
-      },
-    ],
-    "Microsoft Office": [
-      {
-        id: 5,
-        name: "Office 1",
-        Text : "lorem ipsum ini tugas word",
-        image:
-          "https://cdn.idntimes.com/content-images/duniaku/post/20230330/dora-dan-boots-dfc63c106f03db8ea792dcc7647d5be9_600x400.jpg",
-        link: "https://upload.microsoft.com/your-profile/office1", // Link upload untuk Office
-      },
-      {
-        id: 6,
-        name: "Office 2",
-        Text : "lorem ipsum Yang ini Exel",
-        image:
-          "https://d1tgyzt3mf06m9.cloudfront.net/production/media/2018/juni/inilah-aktor-villain-di-live-action-dora-the-explorer/1-inilah-aktor-villain-di-live-action-dora-the-explorer-700x700.jpg",
-        link: "https://upload.microsoft.com/your-profile/office2", // Link upload untuk Office
-      },
-    ],
-  };
+  // Data projects based on categories
 
-  // Fungsi untuk mengganti kategori dan mengembalikan Swiper ke slide pertama
+  const additionalProjectsGraphicDesignDigitalImaging = [
+    {
+      id: 9,
+      name: "Poster",
+      description: "Project using Microsoft PowerPoint",
+      image: poster,
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+  const additionalProjectsGraphicDesignPoster = [
+    {
+      id: 9,
+      name: "digital Imaging",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image: "https://example.com/msoffice4.jpg",
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+  const additionalProjectsGraphicDesignVector = [
+    {
+      id: 9,
+      name: "Vector",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image: "https://example.com/msoffice4.jpg",
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+
+  const additionalProjectsWebDevJS = [
+    {
+      id: 7,
+      name: "Web Dev Project 3",
+      description: "Another web development project",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      link: "https://github.com/zaldibaik/project3",
+    },
+    {
+      id: 8,
+      name: "Web Dev Project 4",
+      description: "Yet another web development project",
+      image: "https://example.com/webdev4.jpg",
+      link: "https://github.com/zaldibaik/project4",
+    },
+  ];
+  const additionalProjectsWebDevPHP = [
+    {
+      id: 7,
+      name: "Web Dev Project 3",
+      description: "Another web development project",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      link: "https://github.com/zaldibaik/project3",
+    },
+    {
+      id: 8,
+      name: "Web Dev Project 4",
+      description: "Yet another web development project",
+      image: "https://example.com/webdev4.jpg",
+      link: "https://github.com/zaldibaik/project4",
+    },
+  ];
+
+  const additionalProjectsMicrosoftPowerBI = [
+    {
+      id: 9,
+      name: "Microsoft Office Project 3",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+  const additionalProjectsMicrosoftExcel = [
+    {
+      id: 9,
+      name: "Microsoft Office Project 3",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
-    if (swiperRef.current) {
-      swiperRef.current.slideTo(0); // Kembalikan ke slide pertama
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(0); // Reset to first slide
     }
   };
 
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center px-4 md:pb-0 pb-20 md:px-6">
-      {/* Main Content */}
       <div className="w-full max-w-5xl px-4 py-8 mx-auto">
         <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
           {/* Project Title */}
-          <div
-            className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5"
-            data-aos="zoom-in-down"
-          >
+          <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5">
             <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
-                Project
+                Portofolio
               </h1>
             </div>
 
             {/* Category Section */}
-            <div
-              className="flex justify-center space-x-8 mb-8"
-              data-aos="zoom-in-down"
-            >
-              <button
-                onClick={() => handleCategoryChange("Web Development")}
-                className={`md:text-lg md:text-xl md:font-semibold  ${
-                  activeCategory === "Web Development"
-                    ? "underline decoration-blue-500 text-white"
-                    : "text-gray-400"
-                }`}
-              >
-                Web Development
-              </button>
-              <button
-                onClick={() => handleCategoryChange("Graphic Design")}
-                className={`md:text-lg md:text-xl md:font-semibold  ${
-                  activeCategory === "Graphic Design"
-                    ? "underline decoration-blue-500 text-white"
-                    : "text-gray-400"
-                }`}
-              >
-                Graphic Design
-              </button>
-              <button
-                onClick={() => handleCategoryChange("Microsoft Office")}
-                className={`md:text-lg md:text-xl md:font-semibold ${
-                  activeCategory === "Microsoft Office"
-                    ? "underline decoration-blue-500 text-white"
-                    : "text-gray-400"
-                }`}
-              >
-                Microsoft Office
-              </button>
+            <div className="flex justify-center space-x-6 md:space-x-8 mb-8">
+              {["Web Development", "Graphic Design", "Microsoft Office"].map(
+                (category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`md:text-lg md:text-xl md:font-semibold ${
+                      activeCategory === category
+                        ? "underline decoration-blue-500 text-white"
+                        : "text-gray-400"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                )
+              )}
             </div>
           </div>
 
-          {/* Carousel Section */}
-          <div
-            className="bg-customBlue2 rounded-xl"
-            data-aos="zoom-in-up"
-          >
-            <div className="relative">
-              <Swiper
-                modules={[Navigation, Pagination]} // Tambahkan Pagination di sini
-                spaceBetween={30}
-                slidesPerView={1}
-                className="w-full"
-                pagination={{ clickable: true }} // Aktifkan pagination yang bisa diklik
-                onSwiper={(swiper) => (swiperRef.current = swiper)} // Set reference untuk Swiper
-              >
-                {projects[activeCategory].map((project) => (
-                  <SwiperSlide key={project.id}>
-                    <div className="flex justify-center items-center pb-10 md:pt-10">
-                      <div className="text-center">
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={project.image}
-                            alt={project.name}
-                            className="rounded-xl mx-auto"
-                          />
-                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                            {project.name}
-                          </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">{project.Text}</p>
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+          {/* Additional Carousel for Web Development */}
+          {activeCategory === "Web Development" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsWebDevJS.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {activeCategory === "Web Development" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsWebDevPHP.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+
+          {activeCategory === "Graphic Design" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsGraphicDesignDigitalImaging.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {activeCategory === "Graphic Design" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsGraphicDesignPoster.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {activeCategory === "Graphic Design" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsGraphicDesignVector.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+
+          {/* Additional Carousel for Microsoft Office */}
+          {activeCategory === "Microsoft Office" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsMicrosoftPowerBI.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {activeCategory === "Microsoft Office" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsMicrosoftExcel.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </div>
     </div>
