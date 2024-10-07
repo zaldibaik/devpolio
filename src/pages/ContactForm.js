@@ -36,7 +36,7 @@ const ContactForm = () => {
         {/* Right Side: Contact Form */}
         <div className="flex flex-col justify-center"data-aos="fade-left">
           <div className="rounded-xl p-6 md:p-8">
-            <h1 className="text-5xl md:text-8xl font-hurricane italic text-white text-center">
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white text-center">
               Contact me
             </h1>
           </div>

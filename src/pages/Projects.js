@@ -168,7 +168,7 @@ const ProjectSection = () => {
           {/* Project Title */}
           <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5">
             <div className="text-center mb-8">
-              <h1 className="text-6xl md:text-8xl font-hurricane italic text-white">
+              <h1 className="text-5xl md:text-7xl font-bold italic text-white">
                 Portofolio
               </h1>
             </div>
@@ -180,7 +180,7 @@ const ProjectSection = () => {
                   <button
                     key={category}
                     onClick={() => handleCategoryChange(category)}
-                    className={`md:text-lg md:text-xl md:font-semihurricane ${
+                    className={`md:text-lg md:text-xl md:font-semibold ${
                       activeCategory === category
                         ? "underline decoration-blue-500 text-white"
                         : "text-gray-400"
@@ -213,7 +213,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-semihurricane mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -244,7 +244,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-semihurricane mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -271,7 +271,7 @@ const ProjectSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className="text-white text-xl md:text-6xl font-hurricane mb-4">
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
                         {project.category}
                       </p>
                       <img
@@ -279,7 +279,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-bold mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -305,7 +305,7 @@ const ProjectSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className="text-white text-xl md:text-7xl font-hurricane mb-4">
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
                         {project.category}
                       </p>
                       <img
@@ -314,7 +314,7 @@ const ProjectSection = () => {
                         className="rounded-xl mx-auto"
                       />
                       
-                      <p className="text-white text-xl md:text-3xl font-bold mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -345,7 +345,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-semihurricane mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -368,7 +368,7 @@ const ProjectSection = () => {
               {additionalProjectsMicrosoftPowerBI.map((project) => (
                 <SwiperSlide key={project.id}>
                   <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
-                  <p className="text-white text-xl md:text-3xl font-semihurricane mb-4">
+                  <p className="text-white text-xl md:text-3xl font-semibold mb-4">
                         {project.category}
                       </p>
                     <a
@@ -381,7 +381,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-semihurricane mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">
@@ -412,7 +412,7 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      <p className="text-white text-xl md:text-2xl font-semihurricane mt-4">
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
                       <p className="text-sm md:text-base text-white leading-relaxed mt-3">

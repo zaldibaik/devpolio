@@ -19,7 +19,7 @@ const Profile = () => {
           />
 
           {/* Name */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-hurricane italic text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-white">
             Zaldi
           </h1>
 
@@ -46,7 +46,7 @@ const Profile = () => {
             className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-4xl md:text-8xl font-hurricane italic text-white">
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white">
               Profile
             </h1>
           </div>

@@ -52,7 +52,7 @@ const Skills = () => {
             className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-4xl md:text-8xl font-hurricane  text-white">
+            <h1 className="text-4xl md:text-6xl font-bold  text-white">
               Skills
             </h1>
 
@@ -109,7 +109,7 @@ const Skills = () => {
               {skills[activeCategory].map((skill, index) => (
                 <SwiperSlide key={index}>
                   <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center">
-                    <h2 className="text-4xl md:text-6xl font-hurricane  text-white">
+                    <h2 className="text-2xl md:text-4xl font-bold  text-white">
                       {skill.name}
                     </h2>
                     {skill.icon && (
