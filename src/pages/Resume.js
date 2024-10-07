@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import LogoIDS from "./assets/Logo-IDS-White-Logotype.png"
+import LogoIDS from "./assets/Logo-IDS-White-Logotype.png";
 
 // Import modul Pagination saja
 import { Pagination } from "swiper/modules";
@@ -351,8 +351,15 @@ const Resume = () => {
             </div>
 
             {/* Add more slides as needed */}
-            
           </Swiper>
+          <div
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center "
+            data-aos="zoom-in-down"
+          >
+            <h1 className="text-2xl md:text-4xl font-bold text-white">
+              Free time experience{" "}
+            </h1>
+          </div>
           <Swiper
             pagination={{ clickable: true }}
             modules={[Pagination]} // Hanya menggunakan Pagination
@@ -364,18 +371,15 @@ const Resume = () => {
               <SwiperSlide>
                 <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-2">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
-                    <img src={LogoIDS}
-                          alt={LogoIDS}
-                          className="h-24">
-                    </img>
+                    <img src={LogoIDS} alt={LogoIDS} className="h-24"></img>
                   </div>
                   <div className="mt-4 md:mt-7">
                     <div className="text-xl md:text-2xl font-bold text-white mb-6">
-                      05/October/2024 
-                      10:00-16:00
+                      05/October/2024 10:00-16:00
                     </div>
                     <div className="text-xl md:text-2xl font-bold text-white">
-                    Jelajahi jalur akademis dalam bidang industri kreatif filem, Studi Desain & Animasi di IDS | BTEC
+                      Jelajahi jalur akademis dalam bidang industri kreatif
+                      filem, Studi Desain & Animasi di IDS | BTEC
                     </div>
                     <p className="text-sm md:text-base text-white leading-relaxed mt-3">
                       Lorem Ipsum is simply dummy text of the printing and
