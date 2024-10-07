@@ -12,6 +12,9 @@ module.exports = {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(135deg, #030025 100%, #088832 100%)',
       },
+      fontFamily: {
+        hurricane: ['Hurricane', 'cursive'],
+      },
     },
   },
   plugins: [],
