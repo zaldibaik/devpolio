@@ -11,7 +11,7 @@ const Resume = () => {
     <div className="bg-customBlue2 min-h-screen  flex justify-center items-center p-4 overflow-hidden md:pb-0 pb-20">
       {/* Main Content */}
       <div className="w-full max-w-5xl ">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8 border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)] mb-8">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 border-2 border-blue-300 md:shadow-[0_4px_15px_rgba(0,123,255,0.6)] mb-8">
           {/* Resume Title */}
           <div
             className=" rounded-xl p-6 md:p-10 text-center"

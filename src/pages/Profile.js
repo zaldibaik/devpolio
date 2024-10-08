@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden mb-24">
       {" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container rounded-xl bg-customBlue rounded-xl0 p-6 md:p-10 max-w-5xl border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container rounded-xl bg-customBlue rounded-xl0 p-6 md:p-10 max-w-5xl border-2 border-blue-300 md:shadow-[0_4px_15px_rgba(0,123,255,0.6)] ">
         {/* Left Side: Profile Picture, Name, CV Button, and Description */}
         <div
           className="flex flex-col items-center justify-center space-y-4 md:space-y-6 rounded-xl text-center"

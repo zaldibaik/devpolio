@@ -195,7 +195,7 @@ const ProjectSection = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center px-4 md:pb-0 pb-20 md:px-6">
       <div className="w-full max-w-5xl px-4 py-8 mx-auto">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 md:shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
           {/* Project Title */}
           <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5 border-2 border-blue-300">
             <div className="text-center mb-8">
@@ -205,23 +205,21 @@ const ProjectSection = () => {
             </div>
 
             {/* Category Section */}
-            <div className="flex justify-center space-x-6 md:space-x-8 mb-8 ">
-              {["Web Development", "Graphic Design", "Microsoft Office"].map(
-                (category) => (
-                  <button
-                    key={category}
-                    onClick={() => handleCategoryChange(category)}
-                    className={`md:text-lg md:text-xl md:font-semibold ${
-                      activeCategory === category
-                        ? "underline decoration-blue-500 text-white"
-                        : "text-gray-400"
-                    }`}
-                  >
-                    {category}
-                  </button>
-                )
-              )}
-            </div>
+            <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
+  {["Web Development", "Graphic Design", "Microsoft Office"].map((category) => (
+    <button
+      key={category}
+      onClick={() => handleCategoryChange(category)}
+      className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
+        activeCategory === category
+          ? "decoration-blue-500 text-white"
+          : "text-gray-400"
+      }`}
+    >
+      {category}
+    </button>
+  ))}
+</div>
           </div>
 
           {/* Additional Carousel for Web Development */}

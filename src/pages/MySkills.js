@@ -46,7 +46,7 @@ const Skills = () => {
     >
       {/* Main Content */}
       <div className="w-full max-w-5xl px-2 py-4 mx-auto">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 md:shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
           {/* Title */}
           <div
             className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full border-2 border-blue-300"
@@ -64,7 +64,7 @@ const Skills = () => {
                 onClick={() => handleCategoryChange("Web Development")}
                 className={`md:text-lg md:text-xl md:font-semibold  ${
                   activeCategory === "Web Development"
-                    ? "underline decoration-blue-500 text-white"
+                    ? " decoration-blue-500 text-white"
                     : "text-gray-400"
                 }`}
               >
@@ -74,7 +74,7 @@ const Skills = () => {
                 onClick={() => handleCategoryChange("Graphic Design")}
                 className={`md:text-lg md:text-xl md:font-semibold  ${
                   activeCategory === "Graphic Design"
-                    ? "underline decoration-blue-500 text-white"
+                    ? " decoration-blue-500 text-white"
                     : "text-gray-400"
                 }`}
               >
@@ -84,7 +84,7 @@ const Skills = () => {
                 onClick={() => handleCategoryChange("Microsoft Office")}
                 className={`md:text-lg md:text-xl md:font-semibold  ${
                   activeCategory === "Microsoft Office"
-                    ? "underline decoration-blue-500 text-white"
+                    ? " decoration-blue-500 text-white"
                     : "text-gray-400"
                 }`}
               >
