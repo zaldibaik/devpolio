@@ -57,7 +57,7 @@ const Skills = () => {
             </h1>
 
             <div
-              className="flex justify-center space-x-8 mb-1 mt-3 "
+              className="flex justify-center space-x-4 md:space-x-6 mb-1 mt-3 "
               data-aos="zoom-in-down"
             >
               <button
