@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import myprofile from "../pages/assets/myprofile.png"; // Sesuaikan path gambar
+import myprofile from "../pages/assets/profile.png"; // Sesuaikan path gambar
 
 const ContactForm = () => {
   const [name, setName] = useState("");
