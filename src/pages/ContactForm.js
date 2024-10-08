@@ -37,7 +37,7 @@ const ContactForm = () => {
         <div className="flex flex-col justify-center"data-aos="fade-left">
           <div className="rounded-xl p-6 md:p-8">
             <h1 className="text-4xl md:text-6xl font-bold italic text-white text-center">
-              Contact me
+            <span className="text-blue-300">Contact</span> me
             </h1>
           </div>
           <div className="mt-4 rounded-xl">

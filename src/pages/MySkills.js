@@ -52,8 +52,8 @@ const Skills = () => {
             className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-4xl md:text-6xl font-bold  text-white">
-              Skills
+            <h1 className="text-4xl md:text-6xl font-bold italic text-white">
+            <span className="text-blue-300">Ski</span>lls
             </h1>
 
             <div

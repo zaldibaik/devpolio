@@ -17,15 +17,15 @@ const Resume = () => {
             className=" rounded-xl p-6 md:p-10 text-center"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
-              Resume
+            <h1 className="text-4xl md:text-6xl font-bold text-white italic">
+              <span className="text-blue-300">Resu</span>me
             </h1>
           </div>
           <div
             className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white ">
+            <h1 className="text-2xl md:text-4xl font-bold text-white italic ">
               Education
             </h1>
           </div>
@@ -60,7 +60,7 @@ const Resume = () => {
               {/* Slide 2 */}
               <SwiperSlide>
                 <div
-                  className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3"
+                  className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300"
                   data-aos="zoom-in-up"
                 >
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
@@ -187,39 +187,6 @@ const Resume = () => {
               </SwiperSlide>
 
               {/* Slide 3 */}
-              <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
-                  <div className="flex flex-col items-center space-y-4 md:space-y-6">
-                    <svg
-                      fill="#ffffff"
-                      width="80px"
-                      height="80px"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="Layer_1"
-                      data-name="Layer 1"
-                    >
-                      <path d="M8.49,12.68v4.61c0,.34,.23,.61,.53,.71v5.48c0,.13-.14,3.21,1.88,5.34,1.22,1.28,2.93,1.94,5.09,1.94s3.88-.65,5.09-1.94c2.02-2.13,1.89-5.21,1.88-5.3v-5.52c.3-.1,.53-.37,.53-.71v-4.61c1.71-.69,2.92-2.36,2.92-4.32,0-2.57-2.09-4.67-4.67-4.67-.49,0-.98,.08-1.46,.23-1.09-1.67-2.93-2.68-4.94-2.68s-3.68,.91-4.79,2.46c-2.74-.22-5.01,1.96-5.01,4.65,0,1.96,1.21,3.63,2.92,4.32Zm11.51,15.11c-.92,.97-2.27,1.46-4,1.46s-3.07-.49-4-1.46c-1.58-1.66-1.48-4.21-1.48-4.28v-5.48h10.96v5.51s.1,2.58-1.48,4.24Zm2.01-14.77v3.51H9.99v-3.51h12.02ZM10.23,5.19c.21,0,.4,.02,.59,.05,.3,.05,.61-.09,.77-.35,.81-1.34,2.22-2.15,3.78-2.15,1.68,0,3.19,.94,3.95,2.45,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.45-.23,.95-.35,1.44-.35,1.75,0,3.17,1.42,3.17,3.17s-1.42,3.17-3.17,3.17H10.23c-1.75,0-3.17-1.42-3.17-3.17s1.42-3.17,3.17-3.17Z" />
-                      <path d="M14.26,5.25c1.5,.28,2.59,1.59,2.59,3.11,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.24-1.6-4.17-3.81-4.59-.4-.07-.8,.19-.88,.6-.08,.41,.19,.8,.6,.88Z" />
-                      <circle cx="13.32" cy="20.07" r="1.25" />
-                      <circle cx="18.68" cy="20.07" r="1.25" />
-                      <path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
-                    </svg>
-                  </div>
-                  <div className="mt-4 md:mt-7">
-                    <div className="text-xl md:text-2xl font-bold text-white">
-                      Lorem Ipsum is simply dummy
-                    </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
             </div>
 
             {/* Add more slides as needed */}
@@ -230,7 +197,7 @@ const Resume = () => {
             className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white ">
+            <h1 className="text-2xl md:text-4xl font-bold text-white italic">
               Experience During PKL
             </h1>
           </div>
@@ -241,60 +208,6 @@ const Resume = () => {
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
-              {/* Slide 2 */}
-              <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                  <div className="flex flex-col items-center space-y-4 md:space-y-6">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="176"
-                      height="41"
-                      viewBox="0 0 176 41"
-                      fill="none"
-                    >
-                      <g clip-path="url(#clip0_8_278)">
-                        <path
-                          d="M63.6089 17.264H69.1089C70.7828 17.264 71.9785 17.7434 72.935 18.4625C73.8915 19.1816 74.6089 20.1405 74.6089 21.339C74.6089 22.2978 74.6089 23.736 74.1306 24.4551C73.6524 25.1742 72.935 25.6536 71.9785 26.133L69.348 26.6124H66.9567V31.4064H63.6089V17.264ZM66.9567 20.3802V23.9757H68.8698L70.5437 23.4963C71.0219 23.0169 71.0219 22.5375 71.0219 22.0581C71.0219 21.5787 70.7828 21.0993 70.3045 20.8596C69.8263 20.3802 69.348 20.3802 68.6306 20.3802H66.9567ZM76.5219 17.264H85.3698V20.1405H79.6306V22.5375H85.1306V25.6536H79.6306V28.2903H85.3698V31.4064H76.5219V17.264ZM88.4785 17.264H94.2176C95.6524 17.264 96.6089 17.7434 97.5654 18.4625C98.2828 19.1816 98.7611 20.3802 98.7611 21.339C99.0002 22.2978 98.7611 23.0169 98.5219 23.736C98.0437 24.4551 96.848 25.4139 95.6524 25.6536L100.196 31.4064H96.1306L92.0654 25.6536H91.5871V31.4064H88.4785V17.264ZM91.5871 20.1405V23.736H92.7828C94.4567 23.736 95.4132 22.7772 95.4132 21.5787C95.4132 20.1405 93.9785 20.1405 93.0219 20.1405H91.5871ZM100.196 17.264H110.957V20.3802H107.37V31.4064H103.783V20.3802H100.196V17.264ZM115.022 17.264H118.37L123.152 31.4064H119.565L118.848 28.7697H114.544L113.587 31.4064H110.239L115.022 17.264ZM116.696 21.8184L115.022 26.133H117.891L116.696 21.8184ZM126.5 17.264H129.848L132.239 25.1742L135.109 17.264H138.457L140.131 31.4064H137.022L136.065 23.4963L132.957 31.4064H131.761L128.652 23.2566L127.457 31.4064H124.348L126.5 17.264ZM142.283 17.264H145.631V31.4064H142.283V17.264ZM158.065 17.5037H161.174V31.4064H157.826L151.848 23.0169V31.4064H148.739V17.5037H151.848L158.065 26.133V17.5037ZM167.87 17.264H171.457L176 31.4064H172.652L171.696 28.7697H167.391L166.435 31.4064H163.087L167.87 17.264ZM169.544 21.8184L168.109 26.133H170.978L169.544 21.8184Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M0 40.9944L12.913 20.6199C14.587 17.5037 16.2609 17.264 21.2826 17.264H32.2826C31.5652 17.9831 30.3696 18.9419 29.6522 20.3802L18.413 38.3577C17.2174 40.2753 15.0652 40.9944 12.1957 40.9944H0Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M43.7608 17.264C38.739 17.264 37.0651 17.5037 35.1521 20.6199L28.2173 31.4064H41.1303C43.2825 31.4064 45.4347 30.4476 46.3912 28.7697L53.8042 17.264H43.7608Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M38.4999 0.00561523C43.5216 0.00561523 44.9564 0.245316 46.8695 3.12173L53.8042 13.9083H41.1303C38.9782 13.9083 36.826 12.9495 35.8695 11.5113L28.2173 0.00561523H38.4999Z"
-                          fill="white"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_8_278">
-                          <rect width="176" height="41" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div className="mt-4 md:mt-7">
-                    <div className="text-xl md:text-2xl font-bold text-white mb-6">
-                      01/Agustus/2024 - Present
-                    </div>
-                    <div className="text-xl md:text-2xl font-bold text-white">
-                      Melaksanakan PKL di Shared Services Project – Technology &
-                      Development
-                    </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
               <SwiperSlide>
                 <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
@@ -356,7 +269,7 @@ const Resume = () => {
             className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white ">
+            <h1 className="text-2xl md:text-4xl font-bold text-white italic">
               Free time experience{" "}
             </h1>
           </div>

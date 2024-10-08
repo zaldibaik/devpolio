@@ -203,7 +203,7 @@ const ProjectSection = () => {
           <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5 border-2 border-blue-300">
             <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
-                Portofolio
+              <span className="text-blue-300">Porto</span>folio
               </h1>
             </div>
 

@@ -3,7 +3,7 @@ import myprofile from "../pages/assets/myprofile.png";
 
 const Profile = () => {
   return (
-    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden mb-24">
+    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden md:mb-0 mb-24">
       {" "}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container rounded-xl bg-customBlue rounded-xl0 p-6 md:p-10 max-w-5xl border-2 border-blue-300 md:shadow-[0_4px_15px_rgba(0,123,255,0.6)] ">
         {/* Left Side: Profile Picture, Name, CV Button, and Description */}
@@ -20,7 +20,7 @@ const Profile = () => {
 
           {/* Name */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-white">
-            Zaldi
+            <span className="text-blue-00">Zal</span>di
           </h1>
 
           {/* Download CV Text */}
@@ -46,7 +46,7 @@ const Profile = () => {
             data-aos="zoom-in-down"
           >
             <h1 className="text-4xl md:text-6xl font-bold italic text-white">
-              Profile
+              <span className="text-blue-300">Pro</span>file
             </h1>
           </div>
 
