@@ -23,7 +23,7 @@ const ContactForm = () => {
           <img
             src={myprofile}
             alt="Profile"
-            className="w-48 h-48 rounded-full border-4 border-white mb-6"
+            className="w-48 h-48 rounded-full border-4 border-blue-300  mb-6"
           />
           <h2 className="text-xl font-bold mb-2">Zaldi</h2>
           <p className="text-sm mb-2">zaldiallan4083@gmail.com</p>
@@ -79,7 +79,7 @@ const ContactForm = () => {
                 ></textarea>
               </div>
               <div className="flex justify-center">
-                <button type="submit" className="bg-blue-500 hover:bg-blue-400 text-white sm font-bold py-1 px-4 rounded-lg">
+                <button type="submit" className="bg-customBlue2 hover:bg-blue-400 text-white sm font-bold py-1 px-4 border-2 border-blue-300 rounded-lg ">
                   Submit via WhatsApp
                 </button>
               </div>

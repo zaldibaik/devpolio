@@ -8,10 +8,10 @@ import { Pagination } from "swiper/modules";
 
 const Resume = () => {
   return (
-    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden md:pb-0 pb-20">
+    <div className="bg-customBlue2 min-h-screen  flex justify-center items-center p-4 overflow-hidden md:pb-0 pb-20">
       {/* Main Content */}
-      <div className="w-full max-w-5xl">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8">
+      <div className="w-full max-w-5xl ">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
           {/* Resume Title */}
           <div
             className=" rounded-xl p-6 md:p-10 text-center"
@@ -22,10 +22,10 @@ const Resume = () => {
             </h1>
           </div>
           <div
-            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center"
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white">
+            <h1 className="text-2xl md:text-4xl font-bold text-white ">
               Education
             </h1>
           </div>
@@ -37,7 +37,7 @@ const Resume = () => {
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
               <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6"></div>
                   <div className="mt-4 md:mt-6">
                     <div className="text-xl text-3xl md:text-5xl font-bold text-white">
@@ -227,10 +227,10 @@ const Resume = () => {
 
           {/* Logos and Text in Swiper */}
           <div
-            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center"
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white">
+            <h1 className="text-2xl md:text-4xl font-bold text-white ">
               Experience During PKL
             </h1>
           </div>
@@ -243,7 +243,7 @@ const Resume = () => {
             <div data-aos="zoom-in-up">
               {/* Slide 2 */}
               <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -296,7 +296,7 @@ const Resume = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -353,10 +353,10 @@ const Resume = () => {
             {/* Add more slides as needed */}
           </Swiper>
           <div
-            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center "
+            className="bg-customBlue2 mt-6 rounded-xl p-6 md:p-10 text-center border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
-            <h1 className="text-2xl md:text-4xl font-bold text-white">
+            <h1 className="text-2xl md:text-4xl font-bold text-white ">
               Free time experience{" "}
             </h1>
           </div>
@@ -369,7 +369,7 @@ const Resume = () => {
             <div data-aos="zoom-in-up">
               {/* Slide 2 */}
               <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-2">
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-2 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6">
                     <img src={LogoIDS} alt={LogoIDS} className="h-24"></img>
                   </div>

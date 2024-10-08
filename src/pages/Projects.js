@@ -5,7 +5,13 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import poster from "./assets/PosterBangor.jpg";
 import DashboardSeles from "./assets/dashboardseles.png";
-import posterInfografi from "./assets/posterinfograpi.png"
+import posterInfografi from "./assets/posterinfograpi.png";
+import desainBlue from "./assets/design blue.png";
+import crocodile from "./assets/beground (1).png";
+import peri from "./assets/GABUNGAN GAMBAR (1).png";
+import sampulBuku from "./assets/Buku zaldi dgn.png";
+import MonsterBacground from "./assets/bacground1.png";
+import Monster from "./assets/Hue_Saturation 1 copy 2.png";
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
@@ -18,38 +24,45 @@ const ProjectSection = () => {
   const additionalProjectsGraphicDesignDigitalImaging = [
     {
       id: 9,
-      category:"Digital Imaging",
-      name: "Digital Imaging",
+      category: "Digital Imaging",
+      name: "Crocodile",
       description: "Project using Microsoft PowerPoint",
-      image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      image: crocodile,
 
       link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
-      category:"Digital Imaging",
-      name: "Microsoft Office Project 4",
+      category: "Digital Imaging",
+      name: "Menggabungkan gambar",
       description: "Project using Microsoft Access",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      image: peri,
 
+      link: "https://example.com/microsoft-office-project4",
+    },
+    {
+      id: 10,
+      category: "Digital Imaging",
+      name: "Monster",
+      description: "Project using Microsoft Access",
+      image: Monster,
       link: "https://example.com/microsoft-office-project4",
     },
   ];
   const additionalProjectsGraphicDesignPoster = [
     {
       id: 9,
-      category:"poster",
+      category: "poster",
       name: "Poster Bangor",
-      description: "Poster Bangor dalam Tema momen syukur lebih spesial dengan rasa lezat dari bangor",
-      image: 
-        poster,
+      description:
+        "Poster Bangor dalam Tema momen syukur lebih spesial dengan rasa lezat dari bangor",
+      image: poster,
 
       link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
-      category:"poster",
+      category: "poster",
       name: "Poster Infografi",
       description: "Project using Microsoft Access",
       image: posterInfografi,
@@ -59,10 +72,29 @@ const ProjectSection = () => {
   const additionalProjectsGraphicDesignVector = [
     {
       id: 9,
-      name: "Vector",
+      category: "Vector",
+      name: "Design stengah Vector",
       description: "Project using Microsoft PowerPoint",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      image: desainBlue,
+
+      link: "https://example.com/microsoft-office-project3",
+    },
+    {
+      id: 10,
+      category: "Vector",
+      name: "Microsoft Office Project 4",
+      description: "Project using Microsoft Access",
+      image: "https://example.com/msoffice4.jpg",
+      link: "https://example.com/microsoft-office-project4",
+    },
+  ];
+  const additionalProjectsGraphicDesignSampulBuku = [
+    {
+      id: 9,
+      category: "Sampul Buku",
+      name: "Sampul Buku Berpetualang",
+      description: "Project using Microsoft PowerPoint",
+      image: sampulBuku,
 
       link: "https://example.com/microsoft-office-project3",
     },
@@ -74,7 +106,7 @@ const ProjectSection = () => {
       link: "https://example.com/microsoft-office-project4",
     },
   ];
-// Web Development
+  // Web Development
   const additionalProjectsWebDevJS = [
     {
       id: 7,
@@ -115,11 +147,10 @@ const ProjectSection = () => {
   const additionalProjectsMicrosoftPowerBI = [
     {
       id: 9,
-      category:"Power BI",
+      category: "Power BI",
       name: "Dashboard Seles",
       description: "Project using Microsoft PowerPoint",
-      image:
-        DashboardSeles,
+      image: DashboardSeles,
 
       link: "https://example.com/microsoft-office-project3",
     },
@@ -164,9 +195,9 @@ const ProjectSection = () => {
   return (
     <div className="bg-customBlue2 min-h-screen flex justify-center items-center px-4 md:pb-0 pb-20 md:px-6">
       <div className="w-full max-w-5xl px-4 py-8 mx-auto">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
           {/* Project Title */}
-          <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5">
+          <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5 border-2 border-blue-300">
             <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
                 Portofolio
@@ -174,7 +205,7 @@ const ProjectSection = () => {
             </div>
 
             {/* Category Section */}
-            <div className="flex justify-center space-x-6 md:space-x-8 mb-8">
+            <div className="flex justify-center space-x-6 md:space-x-8 mb-8 ">
               {["Web Development", "Graphic Design", "Microsoft Office"].map(
                 (category) => (
                   <button
@@ -202,7 +233,7 @@ const ProjectSection = () => {
             >
               {additionalProjectsWebDevJS.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"
@@ -233,7 +264,7 @@ const ProjectSection = () => {
             >
               {additionalProjectsWebDevPHP.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"
@@ -265,7 +296,7 @@ const ProjectSection = () => {
             >
               {additionalProjectsGraphicDesignDigitalImaging.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"
@@ -299,7 +330,7 @@ const ProjectSection = () => {
             >
               {additionalProjectsGraphicDesignPoster.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"
@@ -313,7 +344,42 @@ const ProjectSection = () => {
                         alt={project.name}
                         className="rounded-xl mx-auto"
                       />
-                      
+
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {activeCategory === "Graphic Design" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsGraphicDesignSampulBuku.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                        {project.category}
+                      </p>
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
@@ -334,12 +400,15 @@ const ProjectSection = () => {
             >
               {additionalProjectsGraphicDesignVector.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                        {project.category}
+                      </p>
                       <img
                         src={project.image}
                         alt={project.name}
@@ -367,10 +436,10 @@ const ProjectSection = () => {
             >
               {additionalProjectsMicrosoftPowerBI.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
-                  <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                    <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                      {project.category}
+                    </p>
                     <a
                       href={project.link}
                       target="_blank"
@@ -401,7 +470,7 @@ const ProjectSection = () => {
             >
               {additionalProjectsMicrosoftExcel.map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                     <a
                       href={project.link}
                       target="_blank"

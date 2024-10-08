@@ -3,9 +3,9 @@ import myprofile from "../pages/assets/myprofile.png";
 
 const Profile = () => {
   return (
-    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container bg-customBlue rounded-xl p-6 md:p-10 pb-16 max-w-5xl">
-        
+    <div className="bg-customBlue2 min-h-screen flex justify-center items-center p-4 overflow-hidden ">
+      {" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg container bg-customBlue rounded-xl p-6 md:p-10 pb-16 max-w-5xl border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
         {/* Left Side: Profile Picture, Name, CV Button, and Description */}
         <div
           className="flex flex-col items-center justify-center space-y-4 md:space-y-6 rounded-xl text-center"
@@ -15,7 +15,7 @@ const Profile = () => {
           <img
             src={myprofile}
             alt="Profile"
-            className="w-32 h-32 md:w-48 md:h-48 rounded-full mb-4 border-4 border-customBlue2"
+            className="w-32 h-32 md:w-48 md:h-48 rounded-full mb-4 border-4 border-blue-300"
           />
 
           {/* Name */}
@@ -29,21 +29,20 @@ const Profile = () => {
           </p>
 
           {/* Download CV Button */}
-          <a 
-            href="/Zaldi.pdf"  // Mengarahkan ke file PDF di folder public
+          <a
+            href="/Zaldi.pdf" // Mengarahkan ke file PDF di folder public
             download="Zaldi.pdf" // Nama file yang akan diunduh
-            className="bg-blue-700 text-white py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-800 transition-colors"
+            className="bg-customBlue2 text-white py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 "
           >
             Download CV
           </a>
         </div>
 
         {/* Right Side: Profile Title and Description */}
-        <div className="flex flex-col items-center justify-center space-y-4 md:space-y-6 md:pb-0 pb-10">
-          
+        <div className="flex flex-col  items-center justify-center space-y-4 md:space-y-6 md:pb-0 pb-10">
           {/* Profile Title */}
           <div
-            className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full"
+            className="bg-customBlue2 rounded-xl p-6 md:p-12 border-2 border-blue-300 text-center w-full"
             data-aos="zoom-in-down"
           >
             <h1 className="text-4xl md:text-6xl font-bold italic text-white">
@@ -53,7 +52,7 @@ const Profile = () => {
 
           {/* Profile Description */}
           <div
-            className="bg-customBlue2 rounded-xl p-6 md:p-8 w-full h-full"
+            className="bg-customBlue2 rounded-xl p-6 border-2 border-blue-300 md:p-8 w-full h-full"
             data-aos="zoom-in-up"
           >
             <p className="text-white leading-relaxed text-sm md:text-base">

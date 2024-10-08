@@ -46,10 +46,10 @@ const Skills = () => {
     >
       {/* Main Content */}
       <div className="w-full max-w-5xl px-2 py-4 mx-auto">
-        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full">
+        <div className="bg-customBlue rounded-xl p-4 md:p-8 w-full border-2 border-blue-300 shadow-[0_4px_15px_rgba(0,123,255,0.6)]">
           {/* Title */}
           <div
-            className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full"
+            className="bg-customBlue2 rounded-xl p-6 md:p-12 text-center w-full border-2 border-blue-300"
             data-aos="zoom-in-down"
           >
             <h1 className="text-4xl md:text-6xl font-bold  text-white">
@@ -108,7 +108,7 @@ const Skills = () => {
             >
               {skills[activeCategory].map((skill, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center">
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center border-2 border-blue-300">
                     <h2 className="text-2xl md:text-4xl font-bold  text-white">
                       {skill.name}
                     </h2>
