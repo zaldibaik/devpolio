@@ -12,6 +12,8 @@ import peri from "./assets/GABUNGAN GAMBAR (1).png";
 import sampulBuku from "./assets/Buku zaldi dgn.png";
 import MonsterBacground from "./assets/bacground1.png";
 import Monster from "./assets/Hue_Saturation 1 copy 2.png";
+import sampulBukuSekolah from "./assets/cover book.png"
+import VectorWajah from "./assets/VectorWajah.png"
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
@@ -82,9 +84,9 @@ const ProjectSection = () => {
     {
       id: 10,
       category: "Vector",
-      name: "Microsoft Office Project 4",
+      name: "Vector Wajah",
       description: "Project using Microsoft Access",
-      image: "https://example.com/msoffice4.jpg",
+      image: VectorWajah,
       link: "https://example.com/microsoft-office-project4",
     },
   ];
@@ -100,9 +102,10 @@ const ProjectSection = () => {
     },
     {
       id: 10,
-      name: "Microsoft Office Project 4",
+      category: "Sampul Buku",
+      name: "Buku visi misi SMK TI BAZMA",
       description: "Project using Microsoft Access",
-      image: "https://example.com/msoffice4.jpg",
+      image: sampulBukuSekolah,
       link: "https://example.com/microsoft-office-project4",
     },
   ];
@@ -150,7 +153,7 @@ const ProjectSection = () => {
       category: "Power BI",
       name: "Dashboard Seles",
       description: "Project using Microsoft PowerPoint",
-      image: DashboardSeles,
+      image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
       link: "https://example.com/microsoft-office-project3",
     },
