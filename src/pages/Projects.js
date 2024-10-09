@@ -353,7 +353,7 @@ const ProjectSection = () => {
                       <div>
                         <a
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
+                          href="https://www.instagram.com/zal_zaldii/"
                         >
                           More on Instagram
                         </a>
