@@ -12,8 +12,8 @@ import peri from "./assets/GABUNGAN GAMBAR (1).png";
 import sampulBuku from "./assets/Buku zaldi dgn.png";
 import MonsterBacground from "./assets/bacground1.png";
 import Monster from "./assets/Hue_Saturation 1 copy 2.png";
-import sampulBukuSekolah from "./assets/cover book.png"
-import VectorWajah from "./assets/VectorWajah.png"
+import sampulBukuSekolah from "./assets/cover book.png";
+import VectorWajah from "./assets/VectorWajah.png";
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
@@ -153,7 +153,8 @@ const ProjectSection = () => {
       category: "Power BI",
       name: "Dashboard Seles",
       description: "Project using Microsoft PowerPoint",
-      image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
       link: "https://example.com/microsoft-office-project3",
     },
@@ -203,26 +204,28 @@ const ProjectSection = () => {
           <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5 border-2 border-blue-300">
             <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
-              <span className="text-blue-300">Porto</span>folio
+                <span className="text-blue-300">Porto</span>folio
               </h1>
             </div>
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-  {["Web Development", "Graphic Design", "Microsoft Office"].map((category) => (
-    <button
-      key={category}
-      onClick={() => handleCategoryChange(category)}
-      className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
-        activeCategory === category
-          ? "decoration-blue-500 text-white"
-          : "text-gray-400"
-      }`}
-    >
-      {category}
-    </button>
-  ))}
-</div>
+              {["Web Development", "Graphic Design", "Microsoft Office"].map(
+                (category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
+                      activeCategory === category
+                        ? "decoration-blue-500 text-white"
+                        : "text-gray-400"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                )
+              )}
+            </div>
           </div>
 
           {/* Additional Carousel for Web Development */}
@@ -248,10 +251,20 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols- gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.instagram.com/zal_zaldii/"
+                        >
+                          More on Github
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
@@ -279,10 +292,20 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols- gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://github.com/zaldibaik"
+                        >
+                          More on Github
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
@@ -314,10 +337,28 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.behance.net/zaldizaldi"
+                        >
+                           More on Behance
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.behance.net/zaldizaldi"
+                        >
+                          More on Instagram
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
@@ -349,10 +390,28 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://github.com/zaldibaik"
+                        >
+                           More on Behance
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://github.com/zaldibaik"
+                        >
+                          More on Instagram
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
@@ -384,10 +443,28 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.behance.net/zaldizaldi"
+                        >
+                           More on Behance
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.instagram.com/zal_zaldii/"
+                        >
+                          More on Instagram
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
@@ -418,10 +495,28 @@ const ProjectSection = () => {
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                         {project.name}
                       </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
                         {project.description}
                       </p>
                     </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.behance.net/zaldizaldi"
+                        >
+                           More on Behance
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.instagram.com/zal_zaldii/"
+                        >
+                          More on Instagram
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
