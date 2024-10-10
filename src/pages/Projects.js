@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import poster from "./assets/PosterBangor.jpg";
-import DashboardSeles from "./assets/dashboardseles.png";
+import DashboardSeles from "./assets/DashboardSales.png";
 import posterInfografi from "./assets/posterinfograpi.png";
 import desainBlue from "./assets/design blue.png";
 import crocodile from "./assets/beground (1).png";
@@ -141,7 +141,7 @@ const ProjectSection = () => {
       name: "Dashboard Seles",
       description: "Project using Microsoft PowerPoint",
       image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+        DashboardSeles,
 
     },
     {

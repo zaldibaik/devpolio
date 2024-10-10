@@ -26,7 +26,7 @@ const ContactForm = () => {
             className="w-48 h-48 rounded-full border-4 border-blue-300  mb-6"
           />
           <h2 className="text-xl font-bold mb-2">Zaldi</h2>
-          <p className="text-sm mb-2">zaldiallan4083@gmail.com</p>
+          <p className="text-sm mb-2">zal_zaldi01@gmail.com</p>
           <p className="text-sm mb-2">082238113283</p>
           <p className="text-sm mb-2">IG: Zal_Zaldi</p>
           <p className="text-sm mb-2">LinkedIn: Zaldi-</p>
@@ -80,7 +80,7 @@ const ContactForm = () => {
               </div>
               <div className="flex justify-center">
                 <button type="submit" className="bg-customBlue2 hover:bg-blue-400 text-white sm font-bold py-1 px-4 border-2 border-blue-300 rounded-lg ">
-                  Submit via WhatsApp
+                  Submit
                 </button>
               </div>
             </form>
