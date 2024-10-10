@@ -49,60 +49,57 @@ const Sidebar = () => {
 
   return (
     <div>
-      {/* Sidebar for Desktop */}
-      <div className="hidden md:flex fixed md:w-45 flex-col justify-center md:justify-end text-white md:pt-12">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.to}
-            className="py-4  text-center flex items-center w-25 rounded-xl"
-            onClick={() => {
-              playSound();
-              setActiveIndex(index); // Set item aktif ketika diklik
-            }}
-          >
-            {activeIndex === index ? <item.activeIcon /> : <item.icon />}
-            <span
-              className={`ml-2 transition-opacity ${
-                activeIndex === index
-                  ? "opacity-100 text-blue-500"
-                  : "opacity-0 text-white"
-              }`}
-            >
-              {item.name}
-            </span>
-          </Link>
-        ))}
-      </div>
+  {/* Sidebar for Desktop */}
+  <div className="hidden md:flex fixed md:w-45 flex-col justify-center md:justify-end text-white md:pt-12">
+    {navItems.map((item, index) => (
+      <Link
+        key={index}
+        to={item.to}
+        className="py-2 text-center flex flex-col items-center w-25 rounded-xl" // Ubah flex agar teks di atas ikon
+        onClick={() => {
+          playSound();
+          setActiveIndex(index); // Set item aktif ketika diklik
+        }}
+      >
+        <span
+          className={`mb-2 transition-opacity ${
+            activeIndex === index ? "opacity-100 text-blue-500" : "opacity-0 text-white"
+          }`}
+        >
+          {item.name}
+        </span>
+        {activeIndex === index ? <item.activeIcon className="w-8 h-8" /> : <item.icon className="w-8 h-8" />}
+      </Link>
+    ))}
+  </div>
 
-      {/* Navbar for Mobile */}
-      <div className="md:hidden bg-customBlue2 fixed bottom-0 w-full flex justify-around text-white py-4">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.to}
-            className="flex flex-col rounded-xl items-center"
-            onClick={() => {
-              playSound();
-              setActiveIndex(index); // Set item aktif ketika diklik
-            }}
-          >
-            {/* Tampilkan nama di atas ikon dengan warna teks yang berubah */}
-            <span
-              className={`text-sm mb-1 transition-opacity ${
-                activeIndex === index
-                  ? "opacity-100 text-blue-500"
-                  : "opacity-0 text-white"
-              }`}
-            >
-              {item.name}
-            </span>
-            {/* Ganti icon berdasarkan state aktif */}
-            {activeIndex === index ? <item.activeIcon /> : <item.icon />}
-          </Link>
-        ))}
-      </div>
-    </div>
+  {/* Navbar for Mobile */}
+  <div className="md:hidden bg-customBlue2 fixed bottom-0 w-full flex justify-around text-white py-4">
+    {navItems.map((item, index) => (
+      <Link
+        key={index}
+        to={item.to}
+        className="flex flex-col rounded-xl items-center"
+        onClick={() => {
+          playSound();
+          setActiveIndex(index); // Set item aktif ketika diklik
+        }}
+      >
+        {/* Tampilkan nama di atas ikon dengan warna teks yang berubah */}
+        <span
+          className={`text-sm mb-1 transition-opacity ${
+            activeIndex === index ? "opacity-100 text-blue-500" : "opacity-0 text-white"
+          }`}
+        >
+          {item.name}
+        </span>
+        {/* Ganti icon berdasarkan state aktif */}
+        {activeIndex === index ? <item.activeIcon /> : <item.icon />}
+      </Link>
+    ))}
+  </div>
+</div>
+
   );
 };
 

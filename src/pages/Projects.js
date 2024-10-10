@@ -31,7 +31,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft PowerPoint",
       image: crocodile,
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -40,7 +39,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft Access",
       image: peri,
 
-      link: "https://example.com/microsoft-office-project4",
     },
     {
       id: 10,
@@ -48,7 +46,6 @@ const ProjectSection = () => {
       name: "Monster",
       description: "Project using Microsoft Access",
       image: Monster,
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
   const additionalProjectsGraphicDesignPoster = [
@@ -60,7 +57,6 @@ const ProjectSection = () => {
         "Poster Bangor dalam Tema momen syukur lebih spesial dengan rasa lezat dari bangor",
       image: poster,
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -68,7 +64,6 @@ const ProjectSection = () => {
       name: "Poster Infografi",
       description: "Project using Microsoft Access",
       image: posterInfografi,
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
   const additionalProjectsGraphicDesignVector = [
@@ -79,7 +74,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft PowerPoint",
       image: desainBlue,
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -87,7 +81,6 @@ const ProjectSection = () => {
       name: "Vector Wajah",
       description: "Project using Microsoft Access",
       image: VectorWajah,
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
   const additionalProjectsGraphicDesignSampulBuku = [
@@ -98,7 +91,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft PowerPoint",
       image: sampulBuku,
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -106,7 +98,6 @@ const ProjectSection = () => {
       name: "Buku visi misi SMK TI BAZMA",
       description: "Project using Microsoft Access",
       image: sampulBukuSekolah,
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
   // Web Development
@@ -117,14 +108,12 @@ const ProjectSection = () => {
       description: "Another web development project",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-      link: "https://github.com/zaldibaik/project3",
     },
     {
       id: 8,
       name: "Web Dev Project 4",
       description: "Yet another web development project",
       image: "https://example.com/webdev4.jpg",
-      link: "https://github.com/zaldibaik/project4",
     },
   ];
   const additionalProjectsWebDevPHP = [
@@ -134,14 +123,12 @@ const ProjectSection = () => {
       description: "Another web development project",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-      link: "https://github.com/zaldibaik/project3",
     },
     {
       id: 8,
       name: "Web Dev Project 4",
       description: "Yet another web development project",
       image: "https://example.com/webdev4.jpg",
-      link: "https://github.com/zaldibaik/project4",
     },
   ];
 
@@ -156,7 +143,6 @@ const ProjectSection = () => {
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -165,7 +151,6 @@ const ProjectSection = () => {
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
   const additionalProjectsMicrosoftExcel = [
@@ -176,7 +161,6 @@ const ProjectSection = () => {
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
-      link: "https://example.com/microsoft-office-project3",
     },
     {
       id: 10,
@@ -185,7 +169,6 @@ const ProjectSection = () => {
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
 
-      link: "https://example.com/microsoft-office-project4",
     },
   ];
 
@@ -398,7 +381,7 @@ const ProjectSection = () => {
                       <div>
                         <a
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://github.com/zaldibaik"
+                          href="https://www.behance.net/zaldizaldi"
                         >
                            More on Behance
                         </a>
@@ -406,7 +389,7 @@ const ProjectSection = () => {
                       <div>
                         <a
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://github.com/zaldibaik"
+                          href="https://www.instagram.com/zal_zaldii/"
                         >
                           More on Instagram
                         </a>
