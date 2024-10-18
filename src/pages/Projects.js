@@ -16,7 +16,7 @@ import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
 
 const ProjectSection = () => {
-  const [activeCategory, setActiveCategory] = useState("Web Development");
+  const [activeCategory, setActiveCategory] = useState("Web Dev");
   const swiperRef = useRef(null);
 
   // Data projects based on categories
@@ -30,7 +30,6 @@ const ProjectSection = () => {
       name: "Crocodile",
       description: "Project using Microsoft PowerPoint",
       image: crocodile,
-
     },
     {
       id: 10,
@@ -38,7 +37,6 @@ const ProjectSection = () => {
       name: "Menggabungkan gambar",
       description: "Project using Microsoft Access",
       image: peri,
-
     },
     {
       id: 10,
@@ -46,6 +44,15 @@ const ProjectSection = () => {
       name: "Monster",
       description: "Project using Microsoft Access",
       image: Monster,
+    },
+  ];
+  const additionalProjectsGraphicDesignAnimasi = [
+    {
+      id: 9,
+      category: "Animasi",
+      name: "Udin & Idin",
+      description:
+        "Sebuah Animasi yang menceritakan kak dan adik yang memiliki sifat yang berbeda",
     },
   ];
   const additionalProjectsGraphicDesignPoster = [
@@ -56,7 +63,6 @@ const ProjectSection = () => {
       description:
         "Poster Bangor dalam Tema momen syukur lebih spesial dengan rasa lezat dari bangor",
       image: poster,
-
     },
     {
       id: 10,
@@ -73,7 +79,6 @@ const ProjectSection = () => {
       name: "Design stengah Vector",
       description: "Project using Microsoft PowerPoint",
       image: desainBlue,
-
     },
     {
       id: 10,
@@ -90,7 +95,6 @@ const ProjectSection = () => {
       name: "Sampul Buku Berpetualang",
       description: "Project using Microsoft PowerPoint",
       image: sampulBuku,
-
     },
     {
       id: 10,
@@ -100,19 +104,19 @@ const ProjectSection = () => {
       image: sampulBukuSekolah,
     },
   ];
-  // Web Development
+  // Web Dev
   const additionalProjectsWebDevJS = [
     {
       id: 7,
       name: "Web Dev Project 3",
-      description: "Another web development project",
+      description: "Another web dev project",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 8,
       name: "Web Dev Project 4",
-      description: "Yet another web development project",
+      description: "Yet another web dev project",
       image: "https://example.com/webdev4.jpg",
     },
   ];
@@ -120,14 +124,14 @@ const ProjectSection = () => {
     {
       id: 7,
       name: "Web Dev Project 3",
-      description: "Another web development project",
+      description: "Another web dev project",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 8,
       name: "Web Dev Project 4",
-      description: "Yet another web development project",
+      description: "Yet another web dev project",
       image: "https://example.com/webdev4.jpg",
     },
   ];
@@ -140,9 +144,7 @@ const ProjectSection = () => {
       category: "Power BI",
       name: "Dashboard Seles",
       description: "Project using Microsoft PowerPoint",
-      image:
-        DashboardSeles,
-
+      image: DashboardSeles,
     },
     {
       id: 10,
@@ -150,7 +152,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-
     },
   ];
   const additionalProjectsMicrosoftExcel = [
@@ -160,7 +161,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-
     },
     {
       id: 10,
@@ -168,7 +168,6 @@ const ProjectSection = () => {
       description: "Project using Microsoft Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-
     },
   ];
 
@@ -193,26 +192,30 @@ const ProjectSection = () => {
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-              {["Web Development", "Graphic Design", "Microsoft Office"].map(
+              {["Web Dev", "Design", "Microsoft Office", "More"].map(
                 (category) => (
-                  <button
-                    key={category}
-                    onClick={() => handleCategoryChange(category)}
-                    className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
-                      activeCategory === category
-                        ? "decoration-blue-500 text-white"
-                        : "text-gray-400"
-                    }`}
-                  >
-                    {category}
-                  </button>
+                  <div key={category} className="relative">
+                    <button
+                      onClick={() => handleCategoryChange(category)}
+                      className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
+                        activeCategory === category
+                          ? "text-blue-500"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                    {activeCategory === category && (
+                      <div className="absolute left-0 right-0 bottom-0 h-1 bg-blue-500" />
+                    )}
+                  </div>
                 )
               )}
             </div>
           </div>
 
-          {/* Additional Carousel for Web Development */}
-          {activeCategory === "Web Development" && (
+          {/*Web Dev */}
+          {activeCategory === "Web Dev" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -253,7 +256,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Web Development" && (
+          {activeCategory === "Web Dev" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -294,8 +297,8 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-
-          {activeCategory === "Graphic Design" && (
+          {/*Desain Grafis */}
+          {activeCategory === "Design" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -330,7 +333,7 @@ const ProjectSection = () => {
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                           href="https://www.behance.net/zaldizaldi"
                         >
-                           More on Behance
+                          More on Behance
                         </a>
                       </div>
                       <div>
@@ -347,7 +350,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Graphic Design" && (
+          {activeCategory === "Design" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -383,7 +386,7 @@ const ProjectSection = () => {
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                           href="https://www.behance.net/zaldizaldi"
                         >
-                           More on Behance
+                          More on Behance
                         </a>
                       </div>
                       <div>
@@ -400,7 +403,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Graphic Design" && (
+          {activeCategory === "Design" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -436,7 +439,7 @@ const ProjectSection = () => {
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                           href="https://www.behance.net/zaldizaldi"
                         >
-                           More on Behance
+                          More on Behance
                         </a>
                       </div>
                       <div>
@@ -453,7 +456,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Graphic Design" && (
+          {activeCategory === "Design" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -488,7 +491,7 @@ const ProjectSection = () => {
                           className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                           href="https://www.behance.net/zaldizaldi"
                         >
-                           More on Behance
+                          More on Behance
                         </a>
                       </div>
                       <div>
@@ -505,8 +508,63 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
+          {activeCategory === "Design" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsGraphicDesignAnimasi.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                        {project.category}
+                      </p>
+                      <video className="max-600" controls>
+                        <source src="/video/Udin&Idin.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                        {project.description}
+                      </p>
+                    </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.behance.net/zaldizaldi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          More on Behance
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                          href="https://www.instagram.com/zal_zaldii/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          More on Instagram
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
 
-          {/* Additional Carousel for Microsoft Office */}
+          {/*Microsoft Office */}
           {activeCategory === "Microsoft Office" && (
             <Swiper
               pagination={{ clickable: true }}
@@ -542,6 +600,38 @@ const ProjectSection = () => {
             </Swiper>
           )}
           {activeCategory === "Microsoft Office" && (
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mt-6"
+            >
+              {additionalProjectsMicrosoftExcel.map((project) => (
+                <SwiperSlide key={project.id}>
+                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="rounded-xl mx-auto"
+                      />
+                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                        {project.name}
+                      </p>
+                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                        {project.description}
+                      </p>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          {/*More*/}
+          {activeCategory === "More" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
