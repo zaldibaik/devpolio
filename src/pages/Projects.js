@@ -526,7 +526,7 @@ const ProjectSection = () => {
                         {project.category}
                       </p>
                       <video className="max-600" controls>
-                        <source src="/video/Udin&Idin.mp4" type="video/mp4" />
+                        <source src="/video/UdinDanIdin.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                       <p className="text-white text-xl md:text-2xl font-semibold mt-4">
