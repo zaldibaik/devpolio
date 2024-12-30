@@ -274,7 +274,7 @@ const Resume = () => {
                       Melaksanakan PKL di Sanbercode sebagai digital marketer
                     </div>
                     <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Selama PKL di SSC Pertamina saya Belajar hal Baru seperti Aplikasi Power Bi, RPA, UiPath dan Bahasa pemograman .NET. dan juga saya bisa mengetaahui tentang perusahan besar pertamina Selain Itu saya juga banyak belajar tentang bagaimana Bisnis bisa kita selesaikan dengan kerja sama antara Tim, dangan mengadakan konsisten.
+                      Selama PKL di Sanbercode saya banyak belajar tentang Digital marketing, di sini saya belajar tentang cara membuat konten contohnya konten edukasi, entertain Upsell, downsell, dan crosssel sealin itu saya juga belajar tentang riset Kompotitor.
                     </p>
                   </div>
                 </div>
