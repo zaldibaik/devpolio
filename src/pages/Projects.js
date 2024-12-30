@@ -136,7 +136,7 @@ const ProjectSection = () => {
     },
   ];
 
-  // Microsoft Office
+  // Microsoft
 
   const additionalProjectsMicrosoftPowerBI = [
     {
@@ -148,7 +148,7 @@ const ProjectSection = () => {
     },
     {
       id: 10,
-      name: "Microsoft Office Project 4",
+      name: "Microsoft Project 4",
       description: "Project using Microsoft Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
@@ -157,14 +157,14 @@ const ProjectSection = () => {
   const additionalProjectsMicrosoftExcel = [
     {
       id: 9,
-      name: "Microsoft Office Project 3",
+      name: "Microsoft Project 3",
       description: "Project using Microsoft PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 10,
-      name: "Microsoft Office Project 4",
+      name: "Microsoft Project 4",
       description: "Project using Microsoft Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
@@ -192,7 +192,7 @@ const ProjectSection = () => {
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-              {["Web Dev", "Design", "Microsoft Office", "More"].map(
+              {["Web Dev", "Design", "Microsoft", "More"].map(
                 (category) => (
                   <div key={category} className="relative">
                     <button
@@ -564,8 +564,8 @@ const ProjectSection = () => {
             </Swiper>
           )}
 
-          {/*Microsoft Office */}
-          {activeCategory === "Microsoft Office" && (
+          {/*Microsoft */}
+          {activeCategory === "Microsoft" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -599,7 +599,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Microsoft Office" && (
+          {activeCategory === "Microsoft" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}

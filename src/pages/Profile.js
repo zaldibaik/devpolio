@@ -20,7 +20,7 @@ const Profile = () => {
 
           {/* Name */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold italic text-white">
-            <span className="text-blue-00">Zal</span>di
+            <span className="text-blue-300">Zal</span>di
           </h1>
 
           {/* Download CV Text */}
@@ -58,12 +58,12 @@ const Profile = () => {
             <p className="text-white leading-relaxed text-sm md:text-base">
               Halo, perkenalkan, aku Zaldi. Aku lahir di Bo'di, Desa Perangian,
               Kecamatan Baraka, Kabupaten Enrekang, Sulawesi Selatan. Saat ini,
-              aku tinggal di Jakarta Selatan sebagai siswa PKL dari SMK TI
-              BAZMA. Aku adalah anak pertama dan bercita-cita menjadi orang yang
+              aku tinggal di Kota Bandung sebagai siswa PKL dari SMK TI
+              BAZMA di perusahaan sanbercode sebagai digital marketer. Aku adalah anak pertama yang bercita-cita menjadi orang yang
               sukses, sukses di dunia dan akhirat. Aamiin. 🫣
             </p>
             <p className="text-white leading-relaxed text-sm md:text-base mt-4">
-              Hobi aku adalah bermain game mobile seperti PUBG, Mobile Legends,
+              Hobi aku adalah bermain game mobile seperti Mobile Legends,
               dan lainnya. Selain itu, aku juga suka menggambar, mendesain, dan
               membangun website.
             </p>
