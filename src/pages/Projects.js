@@ -14,6 +14,7 @@ import MonsterBacground from "./assets/bacground1.png";
 import Monster from "./assets/Hue_Saturation 1 copy 2.png";
 import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
+import cakeshop from "./assets/wedevporto.png";
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Dev");
@@ -108,33 +109,27 @@ const ProjectSection = () => {
   const additionalProjectsWebDevJS = [
     {
       id: 7,
-      name: "Web Dev Project 3",
-      description: "Another web dev project",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
-    {
-      id: 8,
-      name: "Web Dev Project 4",
-      description: "Yet another web dev project",
-      image: "https://example.com/webdev4.jpg",
+      category: "laravel",
+      name: "Project UKK",
+      description: "Project UKK Yaitu membuat webuah website iccomers",
+      image: cakeshop,
     },
   ];
-  const additionalProjectsWebDevPHP = [
-    {
-      id: 7,
-      name: "Web Dev Project 3",
-      description: "Another web dev project",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
-    {
-      id: 8,
-      name: "Web Dev Project 4",
-      description: "Yet another web dev project",
-      image: "https://example.com/webdev4.jpg",
-    },
-  ];
+  // const additionalProjectsWebDevPHP = [
+  //   {
+  //     id: 7,
+  //     name: "Web Dev Project 3",
+  //     description: "Another web dev project",
+  //     image:
+  //       "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+  //   },
+  //   {
+  //     id: 8,
+  //     name: "Web Dev Project 4",
+  //     description: "Yet another web dev project",
+  //     image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+  //   },
+  // ];
 
   // Microsoft
 
@@ -157,7 +152,7 @@ const ProjectSection = () => {
   const additionalProjectsMicrosoftExcel = [
     {
       id: 9,
-      name: "Microsoft Project 3",
+      name: "Microsoft Project 3",  
       description: "Project using Microsoft PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
@@ -229,6 +224,10 @@ const ProjectSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                        {project.category}
+                      </p>
+
                       <img
                         src={project.image}
                         alt={project.name}
@@ -256,7 +255,7 @@ const ProjectSection = () => {
               ))}
             </Swiper>
           )}
-          {activeCategory === "Web Dev" && (
+          {/* {activeCategory === "Web Dev" && (
             <Swiper
               pagination={{ clickable: true }}
               modules={[Pagination]}
@@ -296,7 +295,7 @@ const ProjectSection = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          )}
+          )} */}
           {/*Desain Grafis */}
           {activeCategory === "Design" && (
             <Swiper
