@@ -11,7 +11,7 @@ import crocodile from "./assets/beground (1).png";
 import peri from "./assets/GABUNGAN GAMBAR (1).png";
 import sampulBuku from "./assets/Buku zaldi dgn.png";
 import MonsterBacground from "./assets/bacground1.png";
-import Monster from "./assets/Hue_Saturation 1 copy 2.png";
+import Monster from "./assets/bacground1.png";
 import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
 import cakeshop from "./assets/wedevporto.png";
@@ -115,21 +115,24 @@ const ProjectSection = () => {
       image: cakeshop,
     },
   ];
-  // const additionalProjectsWebDevPHP = [
-  //   {
-  //     id: 7,
-  //     name: "Web Dev Project 3",
-  //     description: "Another web dev project",
-  //     image:
-  //       "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-  //   },
-  //   {
-  //     id: 8,
-  //     name: "Web Dev Project 4",
-  //     description: "Yet another web dev project",
-  //     image: "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-  //   },
-  // ];
+  const additionalProjectsWebDevLaravel = [
+    {
+      id: 7,
+      category: "Lorem",
+      name: "Web Dev Project 3",
+      description: "Another web dev project",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+    {
+      id: 8,
+      category: "Lorem",
+      name: "Web Dev Project 4",
+      description: "Yet another web dev project",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+  ];
 
   // Microsoft
 
@@ -143,6 +146,7 @@ const ProjectSection = () => {
     },
     {
       id: 10,
+      category: "Lorem",
       name: "Microsoft Project 4",
       description: "Project using Microsoft Access",
       image:
@@ -152,13 +156,53 @@ const ProjectSection = () => {
   const additionalProjectsMicrosoftExcel = [
     {
       id: 9,
-      name: "Microsoft Project 3",  
+      category: "Lorem",
+      name: "Microsoft Project 3",
       description: "Project using Microsoft PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 10,
+      category: "Lorem",
+      name: "Microsoft Project 4",
+      description: "Project using Microsoft Access",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+  ];
+
+  //more
+  const additionalProjectsMore1 = [
+    {
+      id: 9,
+      category: "Lorem",
+      name: "Microsoft Project 3",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+    {
+      id: 10,
+      category: "Lorem",
+      name: "Microsoft Project 4",
+      description: "Project using Microsoft Access",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+  ];
+  const additionalProjectsMore2 = [
+    {
+      id: 9,
+      category: "Lorem",
+      name: "Microsoft Project 3",
+      description: "Project using Microsoft PowerPoint",
+      image:
+        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+    },
+    {
+      id: 10,
+      category: "Lorem",
       name: "Microsoft Project 4",
       description: "Project using Microsoft Access",
       image:
@@ -187,480 +231,578 @@ const ProjectSection = () => {
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-              {["Web Dev", "Design", "Microsoft", "More"].map(
-                (category) => (
-                  <div key={category} className="relative">
-                    <button
-                      onClick={() => handleCategoryChange(category)}
-                      className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
-                        activeCategory === category
-                          ? "text-blue-500"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      {category}
-                    </button>
-                    {activeCategory === category && (
-                      <div className="absolute left-0 right-0 bottom-0 h-1 bg-blue-500" />
-                    )}
-                  </div>
-                )
-              )}
+              {["Web Dev", "Design", "Microsoft", "More"].map((category) => (
+                <div key={category} className="relative">
+                  <button
+                    onClick={() => handleCategoryChange(category)}
+                    className={`text-sm md:text-lg h4 font-medium md:font-semibold ${
+                      activeCategory === category
+                        ? "text-blue-500"
+                        : "text-gray-400"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                  {activeCategory === category && (
+                    <div className="absolute left-0 right-0 bottom-0 h-1 bg-blue-500" />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
           {/*Web Dev */}
-          {activeCategory === "Web Dev" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsWebDevJS.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+            <div>
+              {activeCategory === "Web Dev" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsWebDevJS.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
 
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols- gap-4">
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
-                        >
-                          More on Github
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
                         </a>
+                        <div className="grid grid-cols-1 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                            >
+                              More on Github
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {/* {activeCategory === "Web Dev" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsWebDevPHP.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols- gap-4">
-                      <div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div>
+              {activeCategory === "Web Dev" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsWebDevLaravel.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://github.com/zaldibaik"
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          More on Github
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
                         </a>
+                        <div className="grid grid-cols- md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                            >
+                              More on Github
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )} */}
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+          </div>
           {/*Desain Grafis */}
-          {activeCategory === "Design" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsGraphicDesignDigitalImaging.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
-                        >
-                          More on Behance
-                        </a>
-                      </div>
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
-                        >
-                          More on Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {activeCategory === "Design" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsGraphicDesignPoster.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
 
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+            <div class="...">
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignDigitalImaging.map(
+                    (project) => (
+                      <SwiperSlide key={project.id}>
+                        <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                              {project.category}
+                            </p>
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              className="rounded-xl mx-auto"
+                            />
+                            <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                              {project.name}
+                            </p>
+                            <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                              {project.description}
+                            </p>
+                          </a>
+                          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                            <div>
+                              <a
+                                className="bg-customBlue2 text-white py-2 px-2 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                                href="https://www.behance.net/zaldizaldi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                More on Behance
+                              </a>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                              <a
+                                className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                                href="https://www.instagram.com/zal_zaldii/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                More on Instagram
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  )}
+                </Swiper>
+              )}
+            </div>
+            <div class="...">
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignPoster.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
-                        >
-                          More on Behance
-                        </a>
-                      </div>
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
-                        >
-                          More on Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {activeCategory === "Design" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsGraphicDesignSampulBuku.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
-                        >
-                          More on Behance
-                        </a>
-                      </div>
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
-                        >
-                          More on Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {activeCategory === "Design" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsGraphicDesignVector.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
-                        >
-                          More on Behance
-                        </a>
-                      </div>
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
-                        >
-                          More on Instagram
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {activeCategory === "Design" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsGraphicDesignAnimasi.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                        {project.category}
-                      </p>
-                      <video className="max-600" controls>
-                        <source src="/video/UdinDanIdin.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
-                        {project.description}
-                      </p>
-                    </a>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.behance.net/zaldizaldi"
+                          href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          More on Behance
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
                         </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.behance.net/zaldizaldi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Behance
+                            </a>
+                          </div>
+                          <div class="mt-2 md:mt-0">
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Instagram
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                      <div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div class="...">
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignVector.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <a
-                          className="bg-customBlue2 text-white py-1 px-3 md:py-3 md:px-8 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                          href="https://www.instagram.com/zal_zaldii/"
+                          href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          More on Instagram
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
                         </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.behance.net/zaldizaldi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Behance
+                            </a>
+                          </div>
+                          <div class="mt-2 md:mt-0">
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Instagram
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div class="...">
+              {" "}
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignSampulBuku.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
+                        </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.behance.net/zaldizaldi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Behance
+                            </a>
+                          </div>
+                          <div class="mt-2 md:mt-0">
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Instagram
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div class="...">
+              {" "}
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignAnimasi.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+                          <video className="max-600" controls>
+                            <source
+                              src="/video/UdinDanIdin.mp4"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
+                        </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.behance.net/zaldizaldi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Behance
+                            </a>
+                          </div>
+                          <div class="mt-2 md:mt-0">
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              More on Instagram
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+          </div>
 
           {/*Microsoft */}
-          {activeCategory === "Microsoft" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsMicrosoftPowerBI.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <p className="text-white text-xl md:text-3xl font-semibold mb-4">
-                      {project.category}
-                    </p>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                        {project.description}
-                      </p>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-          {activeCategory === "Microsoft" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsMicrosoftExcel.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                        {project.description}
-                      </p>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+            <div>
+              {activeCategory === "Microsoft" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsMicrosoftPowerBI.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                          {project.category}
+                        </p>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                            {project.description}
+                          </p>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div>
+              {activeCategory === "Microsoft" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsMicrosoftExcel.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                          {project.category}
+                        </p>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                            {project.description}
+                          </p>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+          </div>
           {/*More*/}
-          {activeCategory === "More" && (
-            <Swiper
-              pagination={{ clickable: true }}
-              modules={[Pagination]}
-              className="mt-6"
-            >
-              {additionalProjectsMicrosoftExcel.map((project) => (
-                <SwiperSlide key={project.id}>
-                  <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        className="rounded-xl mx-auto"
-                      />
-                      <p className="text-white text-xl md:text-2xl font-semibold mt-4">
-                        {project.name}
-                      </p>
-                      <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                        {project.description}
-                      </p>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+          
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+            <div>
+              {activeCategory === "More" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsMore1.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                          {project.category}
+                        </p>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                            {project.description}
+                          </p>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div>
+              {activeCategory === "More" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  modules={[Pagination]}
+                  className="mt-6"
+                >
+                  {additionalProjectsMore2.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                          {project.category}
+                        </p>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                            {project.description}
+                          </p>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
