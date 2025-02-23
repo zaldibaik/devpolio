@@ -14,7 +14,8 @@ import MonsterBacground from "./assets/bacground1.png";
 import Monster from "./assets/bacground1.png";
 import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
-import cakeshop from "./assets/wedevporto.png";
+import cakeshop from "./assets/cakeshop.png";
+import webPortofolio from "./assets/webPortofolio.png"; 
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Dev");
@@ -118,11 +119,11 @@ const ProjectSection = () => {
   const additionalProjectsWebDevLaravel = [
     {
       id: 7,
-      category: "Lorem",
-      name: "Web Dev Project 3",
+      category: "React Js",
+      name: "Web portofolio",
       description: "Another web dev project",
       image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      webPortofolio,
     },
     {
       id: 8,
