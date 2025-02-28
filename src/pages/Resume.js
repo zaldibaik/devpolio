@@ -5,7 +5,7 @@ import LogoIDS from "./assets/Logo-IDS-White-Logotype.png";
 import LogoSanbercode from "./assets/logoSanbercode.png";
 
 // Import modul Pagination saja
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Resume = () => {
   return (
@@ -31,34 +31,17 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-            pagination={{ clickable: true }}
-            modules={[Pagination]} // Hanya menggunakan Pagination
-            className="mt-2"
+             pagination={{ clickable: true }}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
+                  className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
-              <SwiperSlide>
-                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
-                  <div className="flex flex-col items-center space-y-4 md:space-y-6"></div>
-                  <div className="mt-4 md:mt-6">
-                    <div className="text-xl text-3xl md:text-5xl font-bold text-white">
-                      SMPN 7 Angge Raja
-                    </div>
-                    <div className="text-xl md:text-2xl font-bold text-white mt-6">
-                      2018 - 2020
-                    </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 2 */}
               <SwiperSlide>
                 <div
                   className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300"
@@ -187,6 +170,28 @@ const Resume = () => {
                 </div>
               </SwiperSlide>
 
+              {/* Slide 2 */}
+              <SwiperSlide >
+                <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                  <div className="flex flex-col items-center space-y-4 md:space-y-6"></div>
+                  <div className="mt-4 md:mt-6">
+                    <div className="text-xl text-3xl md:text-5xl font-bold text-white">
+                      SMPN 7 Angge Raja
+                    </div>
+                    <div className="text-xl md:text-2xl font-bold text-white mt-6">
+                      2018 - 2020
+                    </div>
+                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
               {/* Slide 3 */}
             </div>
 
@@ -203,9 +208,14 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-            pagination={{ clickable: true }}
-            modules={[Pagination]} // Hanya menggunakan Pagination
-            className="mt-2"
+             pagination={{ clickable: true }}
+             autoplay={{
+               delay: 4000,
+               disableOnInteraction: false,
+               pauseOnMouseEnter: true,
+             }}
+             modules={[Pagination, Autoplay]}
+             className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
@@ -253,7 +263,12 @@ const Resume = () => {
                       Development
                     </div>
                     <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Selama PKL di SSC Pertamina saya Belajar hal Baru seperti Aplikasi Power Bi, RPA, UiPath dan Bahasa pemograman .NET. dan juga saya bisa mengetaahui tentang perusahan besar pertamina Selain Itu saya juga banyak belajar tentang bagaimana Bisnis bisa kita selesaikan dengan kerja sama antara Tim, dangan mengadakan konsisten.
+                      Selama PKL di SSC Pertamina saya Belajar hal Baru seperti
+                      Aplikasi Power Bi, RPA, UiPath dan Bahasa pemograman .NET.
+                      dan juga saya bisa mengetaahui tentang perusahan besar
+                      pertamina Selain Itu saya juga banyak belajar tentang
+                      bagaimana Bisnis bisa kita selesaikan dengan kerja sama
+                      antara Tim, dangan mengadakan konsisten.
                     </p>
                   </div>
                 </div>
@@ -263,8 +278,12 @@ const Resume = () => {
             <div data-aos="zoom-in-up">
               <SwiperSlide>
                 <div className="bg-customBlue2 rounded-xl p-2 md:p-8 text-center m-3 border-2 border-blue-300">
-                <div className="flex flex-col items-center space-y-4 md:space-y-6">
-                    <img src={LogoSanbercode} alt={LogoSanbercode} className="h-20"></img>
+                  <div className="flex flex-col items-center space-y-4 md:space-y-6">
+                    <img
+                      src={LogoSanbercode}
+                      alt={LogoSanbercode}
+                      className="h-20"
+                    ></img>
                   </div>
                   <div className="mt-4 md:mt-7">
                     <div className="text-xl md:text-2xl font-bold text-white mb-6">
@@ -274,7 +293,11 @@ const Resume = () => {
                       Melaksanakan PKL di Sanbercode sebagai digital marketer
                     </div>
                     <p className="text-sm md:text-base text-white leading-relaxed mt-3">
-                      Selama PKL di Sanbercode saya banyak belajar tentang Digital marketing, di sini saya belajar tentang cara membuat konten contohnya konten edukasi, entertain Upsell, downsell, dan crosssel sealin itu saya juga belajar tentang riset Kompotitor.
+                      Selama PKL di Sanbercode saya banyak belajar tentang
+                      Digital marketing, di sini saya belajar tentang cara
+                      membuat konten contohnya konten edukasi, entertain Upsell,
+                      downsell, dan crosssel sealin itu saya juga belajar
+                      tentang riset Kompotitor.
                     </p>
                   </div>
                 </div>
@@ -292,9 +315,14 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-            pagination={{ clickable: true }}
-            modules={[Pagination]} // Hanya menggunakan Pagination
-            className="mt-2"
+             pagination={{ clickable: true }}
+             autoplay={{
+               delay: 4000,
+               disableOnInteraction: false,
+               pauseOnMouseEnter: true,
+             }}
+             modules={[Pagination, Autoplay]}
+             className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
