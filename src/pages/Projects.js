@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import poster from "./assets/PosterBangor.jpg";
 import DashboardSeles from "./assets/DashboardSales.png";
 import posterInfografi from "./assets/posterinfograpi.png";
@@ -15,7 +15,7 @@ import Monster from "./assets/bacground1.png";
 import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
 import cakeshop from "./assets/cakeshop.png";
-import webPortofolio from "./assets/webPortofolio.png"; 
+import webPortofolio from "./assets/webPortofolio.png";
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Dev");
@@ -30,21 +30,21 @@ const ProjectSection = () => {
       id: 9,
       category: "Digital Imaging",
       name: "Crocodile",
-      description: "Project using Microsoft PowerPoint",
+      description: "Project using Certificate PowerPoint",
       image: crocodile,
     },
     {
       id: 10,
       category: "Digital Imaging",
       name: "Menggabungkan gambar",
-      description: "Project using Microsoft Access",
+      description: "Project using Certificate Access",
       image: peri,
     },
     {
       id: 10,
       category: "Digital Imaging",
       name: "Monster",
-      description: "Project using Microsoft Access",
+      description: "Project using Certificate Access",
       image: Monster,
     },
   ];
@@ -70,7 +70,7 @@ const ProjectSection = () => {
       id: 10,
       category: "poster",
       name: "Poster Infografi",
-      description: "Project using Microsoft Access",
+      description: "Project using Certificate Access",
       image: posterInfografi,
     },
   ];
@@ -79,14 +79,14 @@ const ProjectSection = () => {
       id: 9,
       category: "Vector",
       name: "Design stengah Vector",
-      description: "Project using Microsoft PowerPoint",
+      description: "Project using Certificate PowerPoint",
       image: desainBlue,
     },
     {
       id: 10,
       category: "Vector",
       name: "Vector Wajah",
-      description: "Project using Microsoft Access",
+      description: "Project using Certificate Access",
       image: VectorWajah,
     },
   ];
@@ -95,14 +95,14 @@ const ProjectSection = () => {
       id: 9,
       category: "Sampul Buku",
       name: "Sampul Buku Berpetualang",
-      description: "Project using Microsoft PowerPoint",
+      description: "Project using Certificate PowerPoint",
       image: sampulBuku,
     },
     {
       id: 10,
       category: "Sampul Buku",
       name: "Buku visi misi SMK TI BAZMA",
-      description: "Project using Microsoft Access",
+      description: "Project using Certificate Access",
       image: sampulBukuSekolah,
     },
   ];
@@ -122,8 +122,7 @@ const ProjectSection = () => {
       category: "React Js",
       name: "Web portofolio",
       description: "Another web dev project",
-      image:
-      webPortofolio,
+      image: webPortofolio,
     },
     {
       id: 8,
@@ -135,39 +134,39 @@ const ProjectSection = () => {
     },
   ];
 
-  // Microsoft
+  // Certificate
 
-  const additionalProjectsMicrosoftPowerBI = [
+  const additionalProjectsCertificatePowerBI = [
     {
       id: 9,
       category: "Power BI",
       name: "Dashboard Seles",
-      description: "Project using Microsoft PowerPoint",
+      description: "Project using Certificate PowerPoint",
       image: DashboardSeles,
     },
     {
       id: 10,
       category: "Lorem",
-      name: "Microsoft Project 4",
-      description: "Project using Microsoft Access",
+      name: "Certificate Project 4",
+      description: "Project using Certificate Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
   ];
-  const additionalProjectsMicrosoftExcel = [
+  const additionalProjectsCertificate = [
     {
       id: 9,
       category: "Lorem",
-      name: "Microsoft Project 3",
-      description: "Project using Microsoft PowerPoint",
+      name: "Certificate Project 3",
+      description: "Project using Certificate PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 10,
       category: "Lorem",
-      name: "Microsoft Project 4",
-      description: "Project using Microsoft Access",
+      name: "Certificate Project 4",
+      description: "Project using Certificate Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
@@ -178,16 +177,16 @@ const ProjectSection = () => {
     {
       id: 9,
       category: "Lorem",
-      name: "Microsoft Project 3",
-      description: "Project using Microsoft PowerPoint",
+      name: "Certificate Project 3",
+      description: "Project using Certificate PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 10,
       category: "Lorem",
-      name: "Microsoft Project 4",
-      description: "Project using Microsoft Access",
+      name: "Certificate Project 4",
+      description: "Project using Certificate Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
@@ -196,16 +195,16 @@ const ProjectSection = () => {
     {
       id: 9,
       category: "Lorem",
-      name: "Microsoft Project 3",
-      description: "Project using Microsoft PowerPoint",
+      name: "Certificate Project 3",
+      description: "Project using Certificate PowerPoint",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
     {
       id: 10,
       category: "Lorem",
-      name: "Microsoft Project 4",
-      description: "Project using Microsoft Access",
+      name: "Certificate Project 4",
+      description: "Project using Certificate Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
@@ -232,7 +231,7 @@ const ProjectSection = () => {
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-              {["Web Dev", "Design", "Microsoft", "More"].map((category) => (
+              {["Web Dev", "Design", "Certificate", "More"].map((category) => (
                 <div key={category} className="relative">
                   <button
                     onClick={() => handleCategoryChange(category)}
@@ -258,7 +257,12 @@ const ProjectSection = () => {
               {activeCategory === "Web Dev" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsWebDevJS.map((project) => (
@@ -289,7 +293,7 @@ const ProjectSection = () => {
                           <div>
                             <a
                               className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                              href="https://www.instagram.com/zal_zaldii/"
+                              href="https://github.com/zzaldi"
                             >
                               More on Github
                             </a>
@@ -305,7 +309,12 @@ const ProjectSection = () => {
               {activeCategory === "Web Dev" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsWebDevLaravel.map((project) => (
@@ -336,7 +345,7 @@ const ProjectSection = () => {
                           <div>
                             <a
                               className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
-                              href="https://www.instagram.com/zal_zaldii/"
+                              href="https://github.com/zzaldi"
                             >
                               More on Github
                             </a>
@@ -356,7 +365,12 @@ const ProjectSection = () => {
               {activeCategory === "Design" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignDigitalImaging.map(
@@ -416,7 +430,12 @@ const ProjectSection = () => {
               {activeCategory === "Design" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignPoster.map((project) => (
@@ -475,7 +494,12 @@ const ProjectSection = () => {
               {activeCategory === "Design" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignVector.map((project) => (
@@ -535,7 +559,12 @@ const ProjectSection = () => {
               {activeCategory === "Design" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignSampulBuku.map((project) => (
@@ -595,7 +624,12 @@ const ProjectSection = () => {
               {activeCategory === "Design" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignAnimasi.map((project) => (
@@ -653,16 +687,21 @@ const ProjectSection = () => {
             </div>
           </div>
 
-          {/*Microsoft */}
+          {/*Certificate */}
           <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
             <div>
-              {activeCategory === "Microsoft" && (
+              {activeCategory === "Certificate" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsMicrosoftPowerBI.map((project) => (
+                  {additionalProjectsCertificatePowerBI.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
@@ -692,13 +731,18 @@ const ProjectSection = () => {
               )}
             </div>
             <div>
-              {activeCategory === "Microsoft" && (
+              {activeCategory === "Certificate" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsMicrosoftExcel.map((project) => (
+                  {additionalProjectsCertificate.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
@@ -729,13 +773,18 @@ const ProjectSection = () => {
             </div>
           </div>
           {/*More*/}
-          
+
           <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
             <div>
               {activeCategory === "More" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsMore1.map((project) => (
@@ -771,7 +820,12 @@ const ProjectSection = () => {
               {activeCategory === "More" && (
                 <Swiper
                   pagination={{ clickable: true }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
                   {additionalProjectsMore2.map((project) => (

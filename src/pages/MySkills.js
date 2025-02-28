@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 // Import gambar
 import programmingLanguages from "../pages/assets/tools-bhs-pemograman.png"; // Gambar hardware (Design)
@@ -84,7 +84,12 @@ const Skills = () => {
           {/* Carousel Section */}
           <div className="relative mt-8" data-aos="zoom-in-up">
             <Swiper
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               pagination={{ clickable: true }}
               navigation={{
                 nextEl: ".swiper-button-next",

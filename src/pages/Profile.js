@@ -57,15 +57,10 @@ const Profile = () => {
           >
             <p className="text-white leading-relaxed text-sm md:text-base">
               Halo, perkenalkan, aku Zaldi. Aku lahir di Bo'di, Desa Perangian,
-              Kecamatan Baraka, Kabupaten Enrekang, Sulawesi Selatan. Saat ini,
-              aku tinggal di Kota Bandung sebagai siswa PKL dari SMK TI
-              BAZMA di perusahaan sanbercode sebagai digital marketer. Aku adalah anak pertama yang bercita-cita menjadi orang yang
-              sukses, sukses di dunia dan akhirat. Aamiin. 🫣
+              Kecamatan Baraka, Kabupaten Enrekang, Sulawesi Selatan.
             </p>
             <p className="text-white leading-relaxed text-sm md:text-base mt-4">
-              Hobi aku adalah bermain game mobile seperti Mobile Legends,
-              dan lainnya. Selain itu, aku juga suka menggambar, mendesain, dan
-              membangun website.
+              SALAM KENALL😁
             </p>
           </div>
         </div>
