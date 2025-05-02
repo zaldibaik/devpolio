@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import poster from "./assets/PosterBangor.jpg";
-import DashboardSeles from "./assets/DashboardSales.png";
 import posterInfografi from "./assets/posterinfograpi.png";
 import desainBlue from "./assets/design blue.png";
 import crocodile from "./assets/beground (1).png";
@@ -16,6 +15,8 @@ import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
 import cakeshop from "./assets/cakeshop.png";
 import webPortofolio from "./assets/webPortofolio.png";
+import CertificateASEAN from "./assets/E-CertificateASEAN.jpg";
+
 
 const ProjectSection = () => {
   const [activeCategory, setActiveCategory] = useState("Web Dev");
@@ -136,37 +137,21 @@ const ProjectSection = () => {
 
   // Certificate
 
-  const additionalProjectsCertificatePowerBI = [
+  const additionalProjectsCertificate1 = [
     {
       id: 9,
-      category: "Power BI",
-      name: "Dashboard Seles",
+      category: "E-Certificate",
+      name: "E-Certificate_ASEAN",
       description: "Project using Certificate PowerPoint",
-      image: DashboardSeles,
-    },
-    {
-      id: 10,
-      category: "Lorem",
-      name: "Certificate Project 4",
-      description: "Project using Certificate Access",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+      image: CertificateASEAN,
     },
   ];
-  const additionalProjectsCertificate = [
+  const additionalProjectsCertificate2 = [
     {
       id: 9,
-      category: "Lorem",
+      category: "E-Certificate",
       name: "Certificate Project 3",
       description: "Project using Certificate PowerPoint",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
-    {
-      id: 10,
-      category: "Lorem",
-      name: "Certificate Project 4",
-      description: "Project using Certificate Access",
       image:
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
@@ -701,7 +686,7 @@ const ProjectSection = () => {
                   modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsCertificatePowerBI.map((project) => (
+                  {additionalProjectsCertificate1.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
@@ -724,6 +709,16 @@ const ProjectSection = () => {
                             {project.description}
                           </p>
                         </a>
+                        <div class="mt-7">
+                          <a
+                            className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                            href="https://drive.google.com/file/d/1F1ZyJRUqTthWg57L6odsKOO7LmQCXzhv/view?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View
+                          </a>
+                        </div>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -742,7 +737,7 @@ const ProjectSection = () => {
                   modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsCertificate.map((project) => (
+                  {additionalProjectsCertificate2.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
@@ -765,6 +760,16 @@ const ProjectSection = () => {
                             {project.description}
                           </p>
                         </a>
+                        <div class="mt-7">
+                          <a
+                            className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                            href="https://drive.google.com/drive/folders/1kfzfjMP29dhn3BktRBhigHlmaNtxt8g1?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View
+                          </a>
+                        </div>
                       </div>
                     </SwiperSlide>
                   ))}
