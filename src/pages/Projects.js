@@ -172,8 +172,8 @@ const ProjectSection = () => {
     },
   ];
 
-  //more
-  const additionalProjectsMore1 = [
+  //Other
+  const additionalProjectsOther1 = [
     {
       id: 9,
       category: "Lorem",
@@ -191,7 +191,7 @@ const ProjectSection = () => {
         "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
   ];
-  const additionalProjectsMore2 = [
+  const additionalProjectsOther2 = [
     {
       id: 9,
       category: "Lorem",
@@ -225,13 +225,13 @@ const ProjectSection = () => {
           <div className="bg-customBlue2 rounded-xl p-1 md:p-5 mb-5 border-2 border-blue-300">
             <div className="text-center mb-8">
               <h1 className="text-5xl md:text-7xl font-bold italic text-white">
-                <span className="text-blue-300">Porto</span>folio
+                <span className="text-blue-300">Proj</span>ects
               </h1>
             </div>
 
             {/* Category Section */}
             <div className="flex justify-center space-x-2 md:space-x-6 mb-4 md:mb-8">
-              {["Web Dev", "Design", "Certificate", "More"].map((category) => (
+              {["Web Dev", "Design", "Certificate", "Other"].map((category) => (
                 <div key={category} className="relative">
                   <button
                     onClick={() => handleCategoryChange(category)}
@@ -252,7 +252,7 @@ const ProjectSection = () => {
           </div>
 
           {/*Web Dev */}
-          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0">
             <div>
               {activeCategory === "Web Dev" && (
                 <Swiper
@@ -295,7 +295,7 @@ const ProjectSection = () => {
                               className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                               href="https://github.com/zzaldi"
                             >
-                              More on Github
+                              Other on Github
                             </a>
                           </div>
                         </div>
@@ -347,7 +347,7 @@ const ProjectSection = () => {
                               className="bg-customBlue2 text-white py-1 px-3 md:py-2 md:px-5 rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
                               href="https://github.com/zzaldi"
                             >
-                              More on Github
+                              Other on Github
                             </a>
                           </div>
                         </div>
@@ -360,7 +360,7 @@ const ProjectSection = () => {
           </div>
           {/*Desain Grafis */}
 
-          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0">
             <div class="...">
               {activeCategory === "Design" && (
                 <Swiper
@@ -405,7 +405,7 @@ const ProjectSection = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                More on Behance
+                                Other on Behance
                               </a>
                             </div>
                             <div class="mt-2 md:mt-0">
@@ -415,7 +415,7 @@ const ProjectSection = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                More on Instagram
+                                Other on Instagram
                               </a>
                             </div>
                           </div>
@@ -470,7 +470,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Behance
+                              Other on Behance
                             </a>
                           </div>
                           <div class="mt-2 md:mt-0">
@@ -480,7 +480,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Instagram
+                              Other on Instagram
                             </a>
                           </div>
                         </div>
@@ -534,7 +534,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Behance
+                              Other on Behance
                             </a>
                           </div>
                           <div class="mt-2 md:mt-0">
@@ -544,7 +544,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Instagram
+                              Other on Instagram
                             </a>
                           </div>
                         </div>
@@ -599,7 +599,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Behance
+                              Other on Behance
                             </a>
                           </div>
                           <div class="mt-2 md:mt-0">
@@ -609,7 +609,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Instagram
+                              Other on Instagram
                             </a>
                           </div>
                         </div>
@@ -665,7 +665,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Behance
+                              Other on Behance
                             </a>
                           </div>
                           <div class="mt-2 md:mt-0">
@@ -675,7 +675,7 @@ const ProjectSection = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              More on Instagram
+                              Other on Instagram
                             </a>
                           </div>
                         </div>
@@ -688,7 +688,7 @@ const ProjectSection = () => {
           </div>
 
           {/*Certificate */}
-          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0">
             <div>
               {activeCategory === "Certificate" && (
                 <Swiper
@@ -772,11 +772,11 @@ const ProjectSection = () => {
               )}
             </div>
           </div>
-          {/*More*/}
+          {/*Other*/}
 
-          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+          <div class="grid md:grid-cols-2 grid-cols-1 md:gap-0">
             <div>
-              {activeCategory === "More" && (
+              {activeCategory === "Other" && (
                 <Swiper
                   pagination={{ clickable: true }}
                   autoplay={{
@@ -787,7 +787,7 @@ const ProjectSection = () => {
                   modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsMore1.map((project) => (
+                  {additionalProjectsOther1.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
@@ -817,7 +817,7 @@ const ProjectSection = () => {
               )}
             </div>
             <div>
-              {activeCategory === "More" && (
+              {activeCategory === "Other" && (
                 <Swiper
                   pagination={{ clickable: true }}
                   autoplay={{
@@ -828,7 +828,7 @@ const ProjectSection = () => {
                   modules={[Pagination, Autoplay]}
                   className="mt-6"
                 >
-                  {additionalProjectsMore2.map((project) => (
+                  {additionalProjectsOther2.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">

@@ -3,14 +3,12 @@ import myprofile from "../pages/assets/profile.png"; // Sesuaikan path gambar
 
 const ContactForm = () => {
   const [name, setName] = useState("");
-  const [nameInstagram, setNameInstagram] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const phoneNumber = "6282238113283"; // Ganti dengan nomor WhatsApp kamu
-    const textMessage = `Nama: ${name}%0AEmail: ${email} %0ANama Instagram: ${nameInstagram}%0APesan: ${message}`;
+    const textMessage = `Nama: ${name} %0APesan: ${message}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${textMessage}`;
     window.open(whatsappUrl, "_blank");
   };
