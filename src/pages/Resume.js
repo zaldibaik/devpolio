@@ -159,7 +159,7 @@ const Resume = () => {
                     <div className="text-xl text-3xl md:text-2xl font-bold text-white">
                       SMK TI BAZMA
                     </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                    <p className="text-sm md:text-base text-white text-justify whitespace-normal leading-relaxed mt-3">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
                       standard dummy text ever since the 1500s, when an unknown
@@ -181,7 +181,7 @@ const Resume = () => {
                     <div className="text-xl md:text-2xl font-bold text-white mt-6">
                       2018 - 2020
                     </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                    <p className="text-sm md:text-base text-white text-justify whitespace-normal leading-relaxed mt-3">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
                       standard dummy text ever since the 1500s, when an unknown
@@ -262,7 +262,7 @@ const Resume = () => {
                       Melaksanakan PKL di Shared Services Project – Technology &
                       Development
                     </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                    <p className="text-sm md:text-base text-justify whitespace-normal text-white leading-relaxed mt-3">
                       Selama PKL di SSC Pertamina saya Belajar hal Baru seperti
                       Aplikasi Power Bi, RPA, UiPath dan Bahasa pemograman .NET.
                       dan juga saya bisa mengetaahui tentang perusahan besar
@@ -292,7 +292,7 @@ const Resume = () => {
                     <div className="text-xl md:text-2xl font-bold text-white">
                       Melaksanakan PKL di Sanbercode sebagai digital marketer
                     </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                    <p className="text-sm md:text-base text-justify whitespace-normal text-white leading-relaxed mt-3">
                       Selama PKL di Sanbercode saya banyak belajar tentang
                       Digital marketing, di sini saya belajar tentang cara
                       membuat konten contohnya konten edukasi, entertain Upsell,
@@ -340,7 +340,7 @@ const Resume = () => {
                       Jelajahi jalur akademis dalam bidang industri kreatif
                       filem, Studi Desain & Animasi di IDS | BTEC
                     </div>
-                    <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                    <p className="text-sm md:text-base text-justify whitespace-normal  text-white leading-relaxed mt-3">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
                       standard dummy text ever since the 1500s, when an unknown
