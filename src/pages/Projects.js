@@ -31,21 +31,21 @@ const ProjectSection = () => {
       id: 9,
       category: "Digital Imaging",
       name: "Crocodile",
-      description: "Project using Certificate PowerPoint",
+      description: "Menyatukan beberapa foto menjadi sebuah gambar yang keren",
       image: crocodile,
     },
     {
       id: 10,
       category: "Digital Imaging",
       name: "Menggabungkan gambar",
-      description: "Project using Certificate Access",
+      description: "Menyatukan beberapa foto menjadi sebuah gambar yang keren",
       image: peri,
     },
     {
       id: 10,
       category: "Digital Imaging",
       name: "Monster",
-      description: "Project using Certificate Access",
+      description: "Menyatukan beberapa foto menjadi sebuah gambar yang keren",
       image: Monster,
     },
   ];
@@ -80,14 +80,14 @@ const ProjectSection = () => {
       id: 9,
       category: "Vector",
       name: "Design stengah Vector",
-      description: "Project using Certificate PowerPoint",
+      description: "Menyatukan foto dengan vector",
       image: desainBlue,
     },
     {
       id: 10,
       category: "Vector",
       name: "Vector Wajah",
-      description: "Project using Certificate Access",
+      description: "Mengubah foto wajah menjadi vrector menggunakan pen tool di adobe illustrator secara detail",
       image: VectorWajah,
     },
   ];
@@ -125,14 +125,6 @@ const ProjectSection = () => {
       description: "Another web dev project",
       image: webPortofolio,
     },
-    {
-      id: 8,
-      category: "Lorem",
-      name: "Web Dev Project 4",
-      description: "Yet another web dev project",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
   ];
 
   // Certificate
@@ -164,16 +156,7 @@ const ProjectSection = () => {
       category: "Lorem",
       name: "Certificate Project 3",
       description: "Project using Certificate PowerPoint",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
-    {
-      id: 10,
-      category: "Lorem",
-      name: "Certificate Project 4",
-      description: "Project using Certificate Access",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
+
     },
   ];
   const additionalProjectsOther2 = [
@@ -182,16 +165,6 @@ const ProjectSection = () => {
       category: "Lorem",
       name: "Certificate Project 3",
       description: "Project using Certificate PowerPoint",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
-    },
-    {
-      id: 10,
-      category: "Lorem",
-      name: "Certificate Project 4",
-      description: "Project using Certificate Access",
-      image:
-        "https://media.suara.com/pictures/653x366/2019/01/09/97107-upin-ipin-youtube.jpg",
     },
   ];
 
@@ -270,7 +243,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -322,7 +295,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -378,7 +351,7 @@ const ProjectSection = () => {
                             <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                               {project.name}
                             </p>
-                            <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                            <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                               {project.description}
                             </p>
                           </a>
@@ -443,7 +416,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -507,7 +480,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -572,7 +545,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -638,7 +611,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3 mb-8">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
                             {project.description}
                           </p>
                         </a>
@@ -691,7 +664,7 @@ const ProjectSection = () => {
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <p className="text-white text-xl md:text-3xl font-semibold mb-4">
                           {project.category}
-                        </p>
+                        </p>  
                         <a
                           href={project.link}
                           target="_blank"
@@ -705,7 +678,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3">
                             {project.description}
                           </p>
                         </a>
@@ -725,7 +698,7 @@ const ProjectSection = () => {
                 </Swiper>
               )}
             </div>
-            <div>
+            {/* <div>
               {activeCategory === "Certificate" && (
                 <Swiper
                   pagination={{ clickable: true }}
@@ -756,7 +729,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3">
                             {project.description}
                           </p>
                         </a>
@@ -775,7 +748,7 @@ const ProjectSection = () => {
                   ))}
                 </Swiper>
               )}
-            </div>
+            </div> */}
           </div>
           {/*Other*/}
 
@@ -811,7 +784,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3">
                             {project.description}
                           </p>
                         </a>
@@ -852,7 +825,7 @@ const ProjectSection = () => {
                           <p className="text-white text-xl md:text-2xl font-semibold mt-4">
                             {project.name}
                           </p>
-                          <p className="text-sm md:text-base text-white leading-relaxed mt-3">
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3">
                             {project.description}
                           </p>
                         </a>
