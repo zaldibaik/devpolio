@@ -124,8 +124,8 @@ const ProjectSection = () => {
     {
       id: 10,
       category: "Art",
-      name: "Vector Wajah",
-      description: "Mengubah foto wajah menjadi vector menggunakan pen tool di adobe illustrator secara detail",
+      name: "Mannene dari toraja",
+      description: "Gambar yang menceritakan tentang adat Toraja yaitu mannene",
       image: Mannene,
     },
   ];
