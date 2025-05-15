@@ -11,9 +11,13 @@ import peri from "./assets/GABUNGAN GAMBAR (1).png";
 import sampulBuku from "./assets/Buku zaldi dgn.png";
 import MonsterBacground from "./assets/bacground1.png";
 import Monster from "./assets/bacground1.png";
+import Mannene from "./assets/Mannene.png";
 import sampulBukuSekolah from "./assets/cover book.png";
 import VectorWajah from "./assets/VectorWajah.png";
+import Tahira from "./assets/Tahira.png";
+import IbuRintis from "./assets/ibuRintis.png";
 import cakeshop from "./assets/cakeshop.png";
+import Tengkorak from "./assets/Tengkorak3.png";
 import webPortofolio from "./assets/webPortofolio.png";
 import CertificateASEAN from "./assets/E-CertificateASEAN.jpg";
 
@@ -49,6 +53,7 @@ const ProjectSection = () => {
       image: Monster,
     },
   ];
+  //Animasi
   const additionalProjectsGraphicDesignAnimasi = [
     {
       id: 9,
@@ -58,6 +63,7 @@ const ProjectSection = () => {
         "Sebuah Animasi yang menceritakan kak dan adik yang memiliki sifat yang berbeda",
     },
   ];
+  //Poster
   const additionalProjectsGraphicDesignPoster = [
     {
       id: 9,
@@ -75,6 +81,7 @@ const ProjectSection = () => {
       image: posterInfografi,
     },
   ];
+  //Vector
   const additionalProjectsGraphicDesignVector = [
     {
       id: 9,
@@ -83,14 +90,46 @@ const ProjectSection = () => {
       description: "Menyatukan foto dengan vector",
       image: desainBlue,
     },
+  ];
+  //Art
+  const additionalProjectsGraphicDesignArt = [
+    {
+      id: 9,
+      category: "Art",
+      name: "Desain tengkorak",
+      description: "Desain Tengkorak dengan vector menggunakan pen tool di adobe illustrator secara detail",
+      image: Tengkorak,
+    },
     {
       id: 10,
-      category: "Vector",
+      category: "Art",
       name: "Vector Wajah",
-      description: "Mengubah foto wajah menjadi vrector menggunakan pen tool di adobe illustrator secara detail",
+      description: "Mengubah foto wajah menjadi vector menggunakan pen tool di adobe illustrator secara detail",
+      image: Tahira,
+    },
+    {
+      id: 10,
+      category: "Art",
+      name: "Vector Wajah",
+      description: "Mengubah foto wajah menjadi vector menggunakan pen tool di adobe illustrator secara detail",
+      image: IbuRintis,
+    },
+    {
+      id: 10,
+      category: "Art",
+      name: "Vector Wajah",
+      description: "Mengubah foto wajah menjadi vector menggunakan pen tool di adobe illustrator secara detail",
       image: VectorWajah,
     },
+    {
+      id: 10,
+      category: "Art",
+      name: "Vector Wajah",
+      description: "Mengubah foto wajah menjadi vector menggunakan pen tool di adobe illustrator secara detail",
+      image: Mannene,
+    },
   ];
+  //Sampul buku
   const additionalProjectsGraphicDesignSampulBuku = [
     {
       id: 9,
@@ -461,6 +500,70 @@ const ProjectSection = () => {
                   className="mt-6"
                 >
                   {additionalProjectsGraphicDesignVector.map((project) => (
+                    <SwiperSlide key={project.id}>
+                      <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-white text-xl md:text-3xl font-semibold mb-4">
+                            {project.category}
+                          </p>
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="rounded-xl mx-auto"
+                          />
+
+                          <p className="text-white text-xl md:text-2xl font-semibold mt-4">
+                            {project.name}
+                          </p>
+                          <p className="text-sm md:text-base text-justify text-white leading-relaxed mt-3 mb-8">
+                            {project.description}
+                          </p>
+                        </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4">
+                          <div>
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.behance.net/zaldizaldi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Other on Behance
+                            </a>
+                          </div>
+                          <div class="mt-2 md:mt-0">
+                            <a
+                              className="bg-customBlue2 text-white py-2 px-2  rounded-full text-base md:text-lg hover:bg-blue-400 transition-colors border-2 w-full"
+                              href="https://www.instagram.com/zal_zaldii/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Other on Instagram
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
+            </div>
+            <div class="...">
+              {activeCategory === "Design" && (
+                <Swiper
+                  pagination={{ clickable: true }}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Pagination, Autoplay]}
+                  className="mt-6"
+                >
+                  {additionalProjectsGraphicDesignArt.map((project) => (
                     <SwiperSlide key={project.id}>
                       <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                         <a
