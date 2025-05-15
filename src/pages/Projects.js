@@ -87,7 +87,7 @@ const ProjectSection = () => {
       id: 9,
       category: "Vector",
       name: "Design stengah Vector",
-      description: "Menyatukan foto dengan vector",
+      description: "Menyatukan foto dengan vector menggunakan adobe illustrator dan adobe photoshop",
       image: desainBlue,
     },
   ];
