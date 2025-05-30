@@ -31,14 +31,14 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-             pagination={{ clickable: true }}
-                  autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                  }}
-                  modules={[Pagination, Autoplay]}
-                  className="mt-6"
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Pagination, Autoplay]}
+            className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
@@ -160,18 +160,25 @@ const Resume = () => {
                       SMK TI BAZMA
                     </div>
                     <p className="text-sm md:text-base text-white text-justify whitespace-normal leading-relaxed mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      Saya adalah alumni SMK TI Bazma, jurusan Sistem Informasi
+                      Jaringan dan Aplikasi. Selama masa studi, saya menemukan
+                      ketertarikan mendalam pada Web Development dan Desain
+                      Grafis. Saya merupakan individu yang adaptif, kreatif, dan
+                      bersemangat dalam mempelajari hal baru. Saya aktif
+                      mengikuti berbagai kegiatan yang mendukung pengembangan
+                      skill digital, seperti membuat konten digital, desain
+                      visual, hingga membangun website portofolio pribadi.
+                      Ketekunan dan kemampuan kolaborasi menjadikan saya mampu
+                      menyelesaikan proyek secara mandiri maupun dalam tim. Saya
+                      terbuka terhadap peluang untuk terus belajar dan
+                      berkembang di bidang teknologi maupun industri kreatif.
                     </p>
                   </div>
                 </div>
               </SwiperSlide>
 
               {/* Slide 2 */}
-              <SwiperSlide >
+              <SwiperSlide>
                 <div className="bg-customBlue2 rounded-xl p-6 md:p-8 text-center m-3 border-2 border-blue-300">
                   <div className="flex flex-col items-center space-y-4 md:space-y-6"></div>
                   <div className="mt-4 md:mt-6">
@@ -208,14 +215,14 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-             pagination={{ clickable: true }}
-             autoplay={{
-               delay: 4000,
-               disableOnInteraction: false,
-               pauseOnMouseEnter: true,
-             }}
-             modules={[Pagination, Autoplay]}
-             className="mt-6"
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Pagination, Autoplay]}
+            className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
@@ -315,14 +322,14 @@ const Resume = () => {
             </h1>
           </div>
           <Swiper
-             pagination={{ clickable: true }}
-             autoplay={{
-               delay: 4000,
-               disableOnInteraction: false,
-               pauseOnMouseEnter: true,
-             }}
-             modules={[Pagination, Autoplay]}
-             className="mt-6"
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Pagination, Autoplay]}
+            className="mt-6"
           >
             {/* Slide 1 */}
             <div data-aos="zoom-in-up">
